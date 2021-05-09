@@ -1,5 +1,5 @@
 <?php 
-class Case 
+class User_Case 
 {
 
 	private $casenumber;
@@ -17,22 +17,23 @@ class Case
 	private $closing_date;	
 	private $parent_case_id;
 
-	public function __construct($casenumber, $recipient_id, $owner_id, $type_id, $subject, status, $priority, $severity, $description	$due_date, $creation_date, $opening_date, $closing_date, $parent_case_id)
+	public function __construct($casenumber, $recipient_id, $owner_id, $type_id, $subject, $status, $priority, $severity, $description, $due_date, $creation_date, $opening_date, $closing_date, $parent_case_id)
 	{
-		this-> = $casenumber;
-		this-> = $recipient_id;
-		this-> = $owner_id;
-		this-> = $type_id;
-		this-> = $subject;
-		this-> = $status; 
-		this-> = $priority; 
-		this-> = $severity;	
-		this-> = $description;	
-		this-> = $due_date;	
-		this-> = $creation_date;	
-		this-> = $opening_date;	
-		this-> = $closing_date;	
-		this-> = $parent_case_id;
+															
+		$this->casenumber = $casenumber;
+		$this->recipient_id = $recipient_id;
+		$this->owner_id = $owner_id;
+		$this->type_id = $type_id;
+		$this->subject = $subject;
+		$this->status = $status; 
+		$this->priority = $priority;
+		$this->severity = $severity;	
+		$this->description = $description;	
+		$this->due_date = $due_date;	
+		$this->creation_date = $creation_date;	
+		$this->opening_date = $opening_date;	
+		$this->closing_date = $closing_date;	
+		$this->parent_case_id = $parent_case_id;
 	}
 }
 ?>
