@@ -152,7 +152,7 @@
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
-					<a href="#home">Home</a>
+					<a href="../admin/Homepage.php">Home</a>
 				</li>
 				<li>
 					<a href="#contact us">Knowledge base</a>
