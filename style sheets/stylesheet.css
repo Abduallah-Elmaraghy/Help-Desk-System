@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 			*
@@ -112,24 +112,8 @@
 				color: white;
 				border-radius: 25px;
 			}
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*
-{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-}
 
-body
-{
-	background: rgb(199, 199, 199);
-	height: 100vh;
-	overflow: hidden;
-	color:white
-}
 
 .center
 {
@@ -158,7 +142,12 @@ label{
 	position:relative;
 	color:rgb(46, 46, 46);
 }
-input[type = "text"]{
+
+input[type = "text"]
+{
+
+input
+  {
 	margin:5px;
 	position:relative;
 	width:30%;
@@ -180,7 +169,21 @@ input[type = "submit"]
 	cursor: pointer;
 	outline: none;
 }
-
+  
+select
+  {
+	margin:5px;
+	position:relative;
+	width:30%;
+	border-radius: 30px;
+	border: none;
+	height:30px;
+	background-color:#adadad;
+}
+option{
+	border-radius:30px ;
+	text-align: center;
+}
 input[type = "submit"]:hover
 {
 	border-color: #FFFFFF;
@@ -189,10 +192,13 @@ input[type = "submit"]:hover
 	border-width: -20px;
 	transition: .7s;
 }
-textarea{
+textarea
+  {
 	
 	border-radius: 30px;
 	border: none;
 	background-color:#adadad;
+
 }
->>>>>>> 40d62b002fc0d57480041a34961f2c9b35769c87
+}
+
