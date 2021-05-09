@@ -24,7 +24,8 @@
             <label style="left:112px;">Due date  </label> <input type="text"style="left:142px;"><br><br>
             <label>Sevirity  </label> <input type="text"style="left:50px;"><br><br>
             <label>Description </label> <textarea type="text"style="position:relative;left:23px;width:60%;"> </textarea>
-         
+
+            <input type="submit" style="position:relative;top:50px;left:350px;">
 			</form> 
 		</div>
 	

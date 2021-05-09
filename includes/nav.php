@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 			*
 			{
@@ -29,15 +29,17 @@
 				background-color: #24262b;
 			}
 
-
-
 			.logo
 			{
 				color: #ffffff;
 				text-transform: uppercase;
 				letter-spacing: 5px;
 				font-size: 20px;
-
+				display: flex;
+			}
+			.logo h1
+			{
+				font-weight: 700;
 			}
 
 			ul.nav_menu
@@ -145,20 +147,21 @@
 	<body>
 		<nav>			
 			<div class="logo">
-				Navbar
+				<img src="..\logo.png" style="width:50px; hieght:40px;">
+				<h1>Rashpetco</h1>
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
 					<a href="#home">Home</a>
 				</li>
 				<li>
-					<a href="#contact us">Contact Us</a>
+					<a href="#contact us">Knowledge base</a>
 				</li>
 				<li>
-					<a href="#about us">About us</a>
+					<a href="#about us">View Cases</a>
 				</li>
 				<li>
-					<a href="#login">Login</a>
+					<a href="#login">Statistics</a>	
 				</li>
 			</ul>
 			<div class="drop_down_Icon" >
