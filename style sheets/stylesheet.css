@@ -43,7 +43,7 @@ label{
 	position:relative;
 	color:rgb(46, 46, 46);
 }
-input[type = "text"]{
+input{
 	margin:5px;
 	position:relative;
 	width:30%;
@@ -65,7 +65,19 @@ input[type = "submit"]
 	cursor: pointer;
 	outline: none;
 }
-
+select{
+	margin:5px;
+	position:relative;
+	width:30%;
+	border-radius: 30px;
+	border: none;
+	height:30px;
+	background-color:#adadad;
+}
+option{
+	border-radius:30px ;
+	text-align: center;
+}
 input[type = "submit"]:hover
 {
 	border-color: #FFFFFF;
