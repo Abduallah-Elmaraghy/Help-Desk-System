@@ -18,7 +18,7 @@
 			</div>
 			<div class="triangle-right"></div>
 		</div>
-		<div class="row">
+		<div class="body">
 			<div class="recent_cases">
 
 			</div>

@@ -64,7 +64,6 @@ body
 	padding: 25px 0 25px 50px;
 	border-bottom: solid black 2px;
 	border-top: solid black 2px;
-
 }
 
 .pending
@@ -80,7 +79,7 @@ body
 	border-radius: 25px;
 }
 
-.row
+.body
 {
 	display: flex;
 	flex-direction: row;
