@@ -20,10 +20,8 @@
 		</div>
 		<div class="body">
 			<div class="recent_cases">
-
 			</div>
 			<div class="last_Accessed">
-
 			</div>
 		</div>
 	</body>
