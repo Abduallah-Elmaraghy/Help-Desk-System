@@ -106,7 +106,7 @@
 		</style>
 	</head>
 	<body>
-		<?php include '../includes/navUser.php';?>
+		<?php include '../includes/navHead.php';?>
 
 		<select>
 			<option >Type of problem</option>

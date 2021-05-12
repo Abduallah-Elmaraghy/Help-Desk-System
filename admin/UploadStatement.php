@@ -187,7 +187,7 @@
 	</header>
 
 	<body>
-		<?php include '../includes/navUser.php';?>
+		<?php include '../includes/navAdmin.php';?>
 		<div class="New_Case_container">
 			<div class = "New_case" >
 				<h1>New Statement</h1>

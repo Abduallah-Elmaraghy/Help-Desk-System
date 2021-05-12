@@ -233,7 +233,7 @@
 		</style>
 	</head>
 	<body>
-		<?php include '../includes/navUser.php';?>
+		<?php include '../includes/navAdmin.php';?>
 		<div class="center_1">
 			<form >
 				<div class="dropdown">

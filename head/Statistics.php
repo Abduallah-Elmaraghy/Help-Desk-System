@@ -83,7 +83,7 @@
     </style>
     <body>
         <?php 
-        include "../includes/nav.php";
+        include "../includes/navHead.php";
         ?>
 
         <div class = combo>

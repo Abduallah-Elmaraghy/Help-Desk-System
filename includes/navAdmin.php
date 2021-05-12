@@ -44,7 +44,7 @@
 
 			ul.nav_menu
 			{
-				width: 40%;
+				width: 60%;
 				display: flex;
 				justify-content: space-around;
 			}
@@ -128,7 +128,7 @@
 				.drop_down_Icon 
 				{
 					display: block;
-				}
+				} 
 
 				.drop_down_Icon:hover
 				{
@@ -140,8 +140,7 @@
 			{
 				transform: translateX(0%);
 			}
-		</style>
-		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+		</style>		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	</head>
 	<body>
@@ -155,13 +154,16 @@
 					<a href="../admin/Homepage.php">Home</a>
 				</li>
 				<li>
-					<a href="../admin/UploadStatement.php">Knowledge base</a>
+					<a href="../admin/KnowledgeBase.php">Knowledge base</a>
 				</li>
 				<li>
 					<a href="../admin/ViewCases.php">View Cases</a>
 				</li>
 				<li>
 					<a href="../admin/ViewStatistics.php">Statistics</a>	
+				</li>
+				<li>
+					<a href="../admin/UploadStatement.php">Upload Statement</a>	
 				</li>
 			</ul>
 			<div class="drop_down_Icon" >

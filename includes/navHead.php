@@ -159,10 +159,10 @@
 					<a href="../head/ViewCases.php">View Cases</a>
 				</li>
 				<li>
-					<a href="../head/EscalateCase.php">Escalations</a>	
+					<a href"#">Escalations</a>	
 				</li>
 				<li>
-					<a href="../head/ViewStatistics.php">Statistics</a>	
+					<a href="../head/Statistics.php">Statistics</a>	
 				</li>
 			</ul>
 			<div class="drop_down_Icon">

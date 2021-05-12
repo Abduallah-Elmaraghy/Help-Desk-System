@@ -9,7 +9,7 @@
     <body>
         <div class = "center" >
             <h1>Login</h1>
-            <form method="post" action="">
+            <form method="post" action="user/Homepage.php">
                 <div class="txt_field">
                     <input type="text" name="mail" required>
                     <span> </span>
@@ -32,29 +32,27 @@
 </html>
 <?php 
 
-$conn = mysqli_connect("localhost","root","","help_desk_system");
-if(!$conn)
-{
-    die("Connetion failed".mysqli_connect_error());
-}
-
-
-if(isset($_POST['Login']))
-{
-    $mail = $_POST['mail'];
-    $pass = $_POST['pass'];
-    $sql = "Select * FROM user where mail = '$mail' AND password ='$pass'";
-    $result = mysqli_query($conn,$sql);
-    if($row = mysqli_fetch_array($result))
-    {
-        header("Location:admin/Homepage.php");
-    }
-    else
-    {
-        echo "invalid username or password";
-        
-    }
-
-
-}
+//$conn = mysqli_connect("localhost","root","","help_desk_system");
+//if(!$conn)
+//{
+//    die("Connetion failed".mysqli_connect_error());
+//}
+//
+//
+//if(isset($_POST['Login']))
+//{
+//    $mail = $_POST['mail'];
+//    $pass = $_POST['pass'];
+//    $sql = "Select * FROM user where mail = '$mail' AND password ='$pass'";
+//    $result = mysqli_query($conn,$sql);
+//    if($row = mysqli_fetch_array($result))
+//    {
+//        header("Location:admin/Homepage.php");
+//    }
+//    else
+//    {
+//        echo "invalid username or password";
+//        
+//    }
+//}
 ?>

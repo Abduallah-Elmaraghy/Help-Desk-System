@@ -155,7 +155,7 @@
 					<a href="../user/Homepage.php">Home</a>
 				</li>
 				<li>
-					<a href="../user/UploadStatement.php">Knowledge base</a>
+					<a href="../user/KnowledgeBase.php">Knowledge base</a>
 				</li>
 				<li>
 					<a href="../user/ViewCases.php">View Cases</a>
@@ -164,7 +164,7 @@
 					<a href="../user/EscalateCase.php">Escalate a case</a>	
 				</li>
 				<li>
-					<a href="../user/EscalateCase.php">New case</a>	
+					<a href="../user/NewCase.php">New case</a>	
 				</li>
 			</ul>
 			<div class="drop_down_Icon">

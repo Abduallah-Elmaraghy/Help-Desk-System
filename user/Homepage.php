@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<?php 
-		include "../includes/navAdmin.php";
+		include "../includes/navUser.php";
 		?>
 
 		<div class="body">
