@@ -5,9 +5,9 @@
 	</head>
 	<body>
 		<?php 
-		include "../includes/navAdmin.php";
+		include "../includes/navHead.php";
 		?>
-		<h3 style="margin-left: 100px;">Pending Cases</h3>
+		<h3 style="margin-left: 100px;">Escalations</h3>
 		<div class="pending_cases">
 			<div class="triangle-left"></div>
 			<div class="pending">

@@ -1,6 +1,6 @@
 <html>
 	<header>
-		<title>Case View</title>
+		<title>New Case</title>
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -18,24 +18,20 @@
 				color:white;
 			}
 
-			form
-			{
-				padding: 0px 25px 100px;
-				box-sizing: border-box;
-			}
 
-			div.New_Case_container
+			.New_Case_container
 			{
 				display: flex;
 				flex-direction: row;
 				margin-top: 100px;
 			}
 
-			div.New_case 
+			.New_case 
 			{
 				display: flex;
 				flex-direction: column;
 				width: 1000px;
+				height: 700px;
 				margin-left: 13%;
 				padding: 50px;
 				background-color: black;
@@ -44,6 +40,11 @@
 				border-radius: 25px;
 			}
 
+			.New_case form
+			{
+				padding: 0px 25px 100px;
+				box-sizing: border-box;
+			}
 
 			.New_case h1
 			{
@@ -139,39 +140,33 @@
 				background-color:#adadad;
 			}
 
-			.table_col .choose
+			.choose
 			{
-				margin-top: 15px;
-				padding-left: 5px;
+				margin-left: 45px;
+				margin-bottom: 20px;
 				display: flex;
 				flex-direction: column;
 			}
-
-			.table_col .choose input[type="file"]
+			.choose input[type="file"]
 			{
 				display: none;
 				padding: 25px;
 				background-color:white;
+				cursor: pointer;
+			}
+			.choose .attachment_label
+			{
+				width: 160px;
+				padding: 7px;
+				color: #000000;
+				background-color:#adadad;
 				border-radius: 25px;
 				cursor: pointer;
-				color: rgb(145, 113, 97);
-				text-transform: uppercase;
-			}
-			.choose .image_label
-			{
-				width: 133px;
-				padding: 7px;
-				font-size: 13px;
-				background-color:white;
-				border-radius: 5px;
-				cursor: pointer;
-				color: rgb(145, 113, 97);
-				text-transform: uppercase;
 			}
 
-			.choose .image_label:hover
+			.choose .attachment_label:hover
 			{
-				color: rgb(145, 113, 97);
+				color: #adadad;
 				background-color: black;
 				border: none;
 			}
@@ -180,7 +175,7 @@
 	</header>
 
 	<body>
-		<?php include '../includes/nav.php';?>
+		<?php include '../includes/navUser.php';?>
 		<div class="New_Case_container">
 			<div class = "New_case" >
 				<h1>New Case</h1>
@@ -211,12 +206,6 @@
 							<label>Parent case</label>
 							<label>Due date</label>
 							<label>Contact name</label>
-							<div class="choose">
-								<input type="file" id="file" accept="image/*">
-								<label for="file" class="image_label">
-									choose an image
-								</label>
-							</div>
 						</div>
 						<div class="table_col">
 							<select>
@@ -229,8 +218,14 @@
 							<input type="text">
 						</div>
 					</div>
-					<label style="margin: 0 10px 0 10px;margin-left: 30px;padding:20px;">Description</label>
-					<textarea type="text"style="position:relative;left:23px;width:60%;"> 
+					<div class="choose">
+						<input type="file" id="file" accept="image/*">
+						<label for="file" class="attachment_label">
+							Add attachment
+						</label>
+					</div>
+					<label style="margin: 0 15px 0 15px;margin-left: 30px;padding:20px;">Description</label>
+					<textarea type="text"style="width:60%;"> 
 					</textarea><br>
 					<div class="submit">
 						<input type="submit">

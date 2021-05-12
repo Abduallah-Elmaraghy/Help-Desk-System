@@ -44,7 +44,7 @@
 
 			ul.nav_menu
 			{
-				width: 40%;
+				width: 60%;
 				display: flex;
 				justify-content: space-around;
 			}
@@ -128,7 +128,7 @@
 				.drop_down_Icon 
 				{
 					display: block;
-				}
+				} 
 
 				.drop_down_Icon:hover
 				{
@@ -152,19 +152,22 @@
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
-					<a href="../admin/Homepage.php">Home</a>
+					<a href="../user/Homepage.php">Home</a>
 				</li>
 				<li>
-					<a href="#contact us">Knowledge base</a>
+					<a href="../user/UploadStatement.php">Knowledge base</a>
 				</li>
 				<li>
-					<a href="#about us">View Cases</a>
+					<a href="../user/ViewCases.php">View Cases</a>
 				</li>
 				<li>
-					<a href="#login">Statistics</a>	
+					<a href="../user/EscalateCase.php">Escalate a case</a>	
+				</li>
+				<li>
+					<a href="../user/EscalateCase.php">New case</a>	
 				</li>
 			</ul>
-			<div class="drop_down_Icon" >
+			<div class="drop_down_Icon">
 				<div class="line1"></div>
 				<div class="line2"></div>
 				<div class="line3"></div>

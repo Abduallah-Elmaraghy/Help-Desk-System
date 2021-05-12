@@ -17,6 +17,41 @@ body
 	background-color: #E5E5DC;
 }
 
+.body
+{
+	display: flex;
+	flex-direction: row;
+	margin-top: 100px;
+}
+
+.table_row
+{
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+}
+
+.table_col
+{
+	display: flex;
+	flex-direction: column;
+	margin: 0 10px 0 10px;
+}
+
+.table_col label
+{
+	padding: 20px;
+	padding-left: 0;
+}
+.table_col ol
+{
+	margin-left: 20px;
+}
+
+.table_col ol li
+{
+	padding: 20px;
+}
 .triangle-left
 {
 	margin-top: 50px;
@@ -74,47 +109,33 @@ body
 	padding: 50px;
 	background-color: black;
 	opacity: 50%;
-	/*					rgb(114, 145, 97, 0.7);*/
 	color: white;
 	border-radius: 25px;
 }
 
-.body
-{
-	display: flex;
-	flex-direction: row;
-	margin-top: 100px;
-}
 
-.col
-{
-	display: flex;
-	flex-direction: column;
-	margin-top: 100px;
-}
 .recent_cases
 {
 	width: 350px;
+	height: 600px;
 	display: flex;
-	margin-left: 150px;
+	margin-left: 200px;
 	padding: 50px;
 	background-color: black;
 	opacity: 50%;
-	/*					rgb(114, 145, 97, 0.7);*/
 	color: white;
 	border-radius: 25px;
 }
 
 .last_Accessed 
 {
+	margin-bottom: 100px;
 	width:500px ;
 	display: flex;
 	margin-left: 150px;
 	padding: 50px;
 	background-color: black;
 	opacity: 50%;
-	/*					rgb(114, 145, 97, 0.7);*/
 	color: white;
 	border-radius: 25px;
 }
-
