@@ -167,3 +167,14 @@ input[type = "submit"]:hover
 	color: #000000;
 	transition: .7s;
 }
+.column {
+	float: left;
+	padding: 2px;
+	height: 200px; /* Should be removed. Only for demonstration */
+	margin-left: 125px;
+}
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
