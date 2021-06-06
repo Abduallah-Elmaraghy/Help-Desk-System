@@ -12,13 +12,6 @@
 				font-family: 'Poppins', sans-serif;
 			}
 
-			body
-			{
-				background: rgb(199, 199, 199);
-				color:white;
-			}
-
-
 			.New_Case_container
 			{
 				display: flex;
@@ -33,8 +26,7 @@
 				width: 1000px;
 				margin-left: 13%;
 				padding: 50px;
-				background-color: black;
-				opacity: 50%;
+				background-color: #1B1717;
 				color: white;
 				border-radius: 25px;
 			}

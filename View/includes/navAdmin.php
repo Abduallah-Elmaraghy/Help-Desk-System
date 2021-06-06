@@ -15,6 +15,7 @@
 			{
 				line-height: 1.5;
 				font-family: 'Poppins', sans-serif;
+				background-color: #EEEBDD;
 			}
 
 			nav
@@ -26,7 +27,7 @@
 				justify-content: space-around;
 				align-items: center;
 				min-height: 8vh;
-				background-color: #24262b;
+				background-color: #630000;
 			}
 
 			.logo
@@ -67,8 +68,8 @@
 
 			ul.nav_menu li a:hover
 			{
-				background-color: #CECFCD;
-				color: #24262b;
+				background-color: #ffffff;
+				color: #630000;
 			}
 
 			.drop_down_Icon

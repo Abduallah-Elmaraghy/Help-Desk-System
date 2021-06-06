@@ -14,7 +14,7 @@ body
 	margin-top: 70px;
 	background-size: cover;
 	line-height: 1.5;
-	background-color: #E5E5DC;
+	background-color: #EEEBDD;
 }
 
 .body
@@ -54,7 +54,7 @@ body
 }
 .triangle-left
 {
-	margin-top: 50px;
+	margin-top: 150px;
 	width: 0;
 	height: 0;
 	border-top: 15px solid transparent;
@@ -73,7 +73,7 @@ body
 
 .triangle-right
 {
-	margin-top: 50px;
+	margin-top: 150px;
 	width: 0;
 	height: 0;
 	border-top: 15px solid transparent;
@@ -92,8 +92,8 @@ body
 
 .pending_cases
 {
-	width: 60%;
-	transform: translateX(30%);
+	width: 80%;
+	margin-left: 10%;
 	display: flex;
 	flex-direction: row;
 	padding: 25px 0 25px 50px;
@@ -101,18 +101,28 @@ body
 	border-top: solid black 2px;
 }
 
-.pending
+.card
 {
-	width: 200px;
-	display: flex;
+	width: 300px;
 	margin: 20px;
-	padding: 50px;
-	background-color: black;
-	opacity: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	background-color: #1B1717;
 	color: white;
-	border-radius: 25px;
+	border-radius: 15px;
 }
 
+.card img
+{
+	border-radius: 15px;
+	width: 300px;
+	height: 200px;
+	display: flex;
+}
+.card .card_body
+{
+	padding: 20px;
+}
 
 .recent_cases
 {
@@ -121,8 +131,7 @@ body
 	display: flex;
 	margin-left: 200px;
 	padding: 50px;
-	background-color: black;
-	opacity: 50%;
+	background-color: #1B1717;
 	color: white;
 	border-radius: 25px;
 }
@@ -134,8 +143,27 @@ body
 	display: flex;
 	margin-left: 150px;
 	padding: 50px;
-	background-color: black;
-	opacity: 50%;
+	background-color: #1B1717;
 	color: white;
 	border-radius: 25px;
+}
+
+input[type = "submit"]
+{
+	background: #000000;
+	border: 2px solid #E5E5DC;
+	color:#E5E5DC;
+	align-content: center;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 25px;
+	cursor: pointer;
+	outline: none;
+}
+
+input[type = "submit"]:hover
+{
+	background: #E5E5DC;
+	color: #000000;
+	transition: .7s;
 }

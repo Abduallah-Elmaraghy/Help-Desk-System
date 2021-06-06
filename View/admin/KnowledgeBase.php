@@ -14,14 +14,8 @@
 				font-family: 'Poppins', sans-serif;
 			}
 
-			body {
-				background: rgb(199, 199, 199);
-				height: 100vh;
-				overflow: hidden;
-				color: white;
-			}
-
-			.center {
+			.center 
+			{
 				position: absolute;
 				top: 50%;
 				left: 20%;
