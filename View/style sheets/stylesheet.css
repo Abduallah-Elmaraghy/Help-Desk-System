@@ -93,10 +93,11 @@ body
 .pending_cases
 {
 	width: 80%;
+	margin-top: 25px;
 	margin-left: 10%;
 	display: flex;
 	flex-direction: row;
-	padding: 25px 0 25px 50px;
+	padding: 25px 0px 25px 0px;
 	border-bottom: solid black 2px;
 	border-top: solid black 2px;
 }
@@ -122,6 +123,12 @@ body
 .card .card_body
 {
 	padding: 20px;
+}
+
+.card .card_body h4
+{
+	padding: 5px;
+	margin: 3px
 }
 
 .recent_cases
@@ -150,21 +157,26 @@ body
 
 input[type = "submit"]
 {
-	background: #000000;
-	border: 2px solid #E5E5DC;
-	color:#E5E5DC;
+	background:#1B1717;
+	float: right;
+	margin: 15px;
+	padding: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 2px solid #EEEBDD;
+	color:#EEEBDD;
 	align-content: center;
 	font-size: 18px;
 	font-weight: 700;
-	border-radius: 25px;
+	border-radius: 15px;
 	cursor: pointer;
 	outline: none;
 }
 
 input[type = "submit"]:hover
 {
-	background: #E5E5DC;
-	color: #000000;
+	background: #EEEBDD;
+	color: #1B1717;
 	transition: .7s;
 }
 .column {
