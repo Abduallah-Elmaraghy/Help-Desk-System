@@ -7,14 +7,14 @@
 
 <body>
     <?php include '../includes/navAdmin.php';?>
-    <select>
+    <select class="filter">
         <option>Type of problem</option>
         <option>Desktop Application</option>
         <option>Network</option>
         <option>Other</option>
 
     </select>
-    <select>
+    <select class="filter">
         <option>Case Status</option>
         <option>Pending</option>
         <option>Opened</option>
@@ -22,7 +22,7 @@
         <option>Closed</option>
     </select>
 
-    <input type="date" value="date modified">
+    <input type="date" class="filter" value="date modified">
 
     <div class="row">
 	<div class="column">

@@ -160,7 +160,13 @@ input[type = "submit"]
 	cursor: pointer;
 	outline: none;
 }
-
+.filter{
+	border-radius: 10px;
+	color: #ffffff;
+	background-color: #630000;
+	padding: 20px;
+	margin-left: 250px;
+}
 input[type = "submit"]:hover
 {
 	background: #E5E5DC;

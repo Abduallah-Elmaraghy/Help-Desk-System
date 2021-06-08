@@ -50,7 +50,7 @@
                 <th>Pirority</th>
                 <th>Due date</th>
                 <th></th>
-              	</tr>
+            </tr>
             <tr>
                 <td>Alfreds Futterkiste</td>
                 <td>Maria Anders</td>
