@@ -86,6 +86,9 @@
 				<li>
 					<a href="../admin/KnowledgeBase.php">Knowledge base</a>
 				</li>
+                <li>
+					<a href="../admin/AddUser.php">Add Employee</a>
+				</li>
 				<li>
 					<a href="../admin/ViewCases.php">View Cases</a>
 				</li>
