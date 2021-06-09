@@ -1,9 +1,8 @@
 <html>
 <header>
     <title>New Case</title>
-    <link rel="stylesheet" href="../style sheets/formssheet.css">
+    <link rel="stylesheet" href="../style%20sheets/stylesheet.css">
 </header>
-
 <body>
     <?php include '../includes/navUser.php';?>
     <div class="New_Case_container">
