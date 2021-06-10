@@ -1,39 +1,39 @@
+<!DOCTYPE html>
 <html>
-<header>
-    <title>New Case</title>
-    <link rel="stylesheet" href="../style%20sheets/stylesheet.css">
-</header>
-<body>
-    <?php include '../includes/navUser.php';?>
-    <div class="New_Case_container">
-        <div class="New_case">
-            <h1>Escalation</h1>
-            <form method="post">
-                <div class="table_row">
-                    <div class="table_col">
-                        <label>Case number</label>
-                        <label>Escalation reason</label>
-                    </div>
-                    <div class="table_col">
-                        <input type="text">
-                        <input type="text">
-                    </div>
-                    <div class="table_col">
-                        <label>Recepient</label>
-                    </div>
-                    <div class="table_col">
-                        <input type="text">
-                    </div>
-                </div>
-                <label style="margin: 0 15px 0 15px;margin-left: 30px;padding:20px;">Description</label>
-                <textarea type="text" style="width:60%;">
-					</textarea><br>
-                <div class="submit">
-                    <input type="submit">
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
-
+	<head>
+		<link rel="stylesheet" href="../style%20sheets/stylesheet.css">
+	</head>
+	<body>
+		<?php include '../includes/navUser.php';?>
+		<form method="post" class="view_card">
+			<h1>Escalation</h1><br>
+			<div class="table_row">
+				<div class="table_col">
+					<label>Case number</label>
+				</div>
+				<div class="table_col">
+					<label>IT450-650</label>
+				</div>
+				<div class="table_col">
+					<label>Recepient</label>
+				</div>
+				<div class="table_col">
+					<label>Alaa Fadel</label>
+				</div>
+			</div>
+			<div class="table_row" style="padding-top:0;">
+				<div class="table_col">
+					<label>Escalation reason</label>
+					<label>Description</label>
+				</div>
+				<div class="table_col">
+					<textarea type="text"></textarea>
+					<textarea type="text"></textarea>
+				</div>
+			</div>
+			<div class="submit">
+				<input type="submit">
+			</div>
+		</form>
+	</body>
 </html>
