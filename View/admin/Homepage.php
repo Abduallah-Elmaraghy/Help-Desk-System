@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="..\style sheets\stylesheet.css">
     <link rel="stylesheet" href="..\style sheets\test.css">
+    <script src="../js/Livesearch.js"></script>
 </head>
 
 <body>
@@ -42,28 +43,7 @@
     <div class="viewcases">
         <h2>Quick access</h2>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
-        <table id="customers">
-            <tr>
-                <th>Case-Number</th>
-                <th>Sevirity</th>
-                <th>Pirority</th>
-                <th>Due date</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-                <td>Germany</td>
-                <td><a href="">Open</a></td>
-            </tr>
-            <tr>
-                <td>Berglunds snabbköp</td>
-                <td>Christina Berglund</td>
-                <td>Sweden</td>
-                <td>Sweden</td>
-                <td><a href="#">Open</a></td>
-
+        
                 <table id="customers">
                     <tr>
                         <th>Case-Number</th>
@@ -122,56 +102,3 @@
 </body>
 
 </html>
-
-<script>
-function myFunction() {
-    // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("customers");
-    tr = table.getElementsByTagName("tr");
-
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        td1 = tr[i].getElementsByTagName("td")[1];
-        td2 = tr[i].getElementsByTagName("td")[2];
-        td3 = tr[i].getElementsByTagName("td")[3];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
-//   else if (td1) {
-//     txtValue = td1.textContent || td1.innerText;
-//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//       tr[i].style.display = "";
-//     } else {
-//       tr[i].style.display = "none";
-//     }
-//   }
-//   else if (td2) {
-//     txtValue = td2.textContent || td2.innerText;
-//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//       tr[i].style.display = "";
-//     } else {
-//       tr[i].style.display = "none";
-//     }
-//   }
-//   else if (td3) {
-//     txtValue = td3.textContent || td3.innerText;
-//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//       tr[i].style.display = "";
-//     } else {
-//       tr[i].style.display = "none";
-//     }
-//   }
-// }
-//}
-</script>
