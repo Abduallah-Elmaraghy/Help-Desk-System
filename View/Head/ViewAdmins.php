@@ -1,40 +1,49 @@
-<?php
-include '../includes/navHead.php';
+<!DOCTYPE html>
+<html>
 
-?>
-<link href="../style sheets/test.css" rel="stylesheet">
-<script src="../js/Livesearch.js"></script>
-<div class="adminc">
-    <div class="viewcases">
-        <h2>View Admins</h2>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
+<head>
+    <link rel="stylesheet" href="..\style sheets\stylesheet.css">
+    <script src="../js/Livesearch.js"></script>
+</head>
 
-        <table id="customers">
-            <tr>
-                <th>Admin's Name</th>
-                <th>Department</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td><input class="AddPenaltyButton" type="submit" value="Add Penalty"></td>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td><input class="AddPenaltyButton" type="submit" value="Add Penalty"></td>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td><input class="AddPenaltyButton" type="submit" value="Add Penalty"></td>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td><input class="AddPenaltyButton" type="submit" value="Add Penalty"></td>
-            </tr>
-        </table>
+<body>
+    <?php 
+		include "../includes/navAdmin.php";
+		?>
+    <h2 style="margin-left: 100px;">Employees</h2>
+
+    <div class="rows">
+        
+        <div class="column">
+            <div class="card">
+                <img src="../../recent%20cases.png">
+                <div class="card_body">
+                    <h4>Case number :</h4>
+                    <h4>Status :</h4>
+                    <input type="submit" value="Open">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="../../recent%20cases.png">
+                <div class="card_body">
+                    <h4>Case number :</h4>
+                    <h4>Status :</h4>
+                    <input type="submit" value="Open">
+                </div>
+            </div>
+        </div><div class="column">
+            <div class="card">
+                <img src="../../recent%20cases.png">
+                <div class="card_body">
+                    <h4>Case number :</h4>
+                    <h4>Status :</h4>
+                    <input type="submit" value="Open">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</body>
+
+</html>
