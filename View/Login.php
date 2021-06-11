@@ -36,7 +36,12 @@
 require_once("../Model/classes/person.php");
 if(isset($_POST['Login'])){
     $p=new Person($_POST['mail'],$_POST['pass']);
-    $p->login($_POST['mail'],$_POST['pass']);
+   $p->login($_POST['mail'],$_POST['pass']);
+   /* require_once "../Model/DB/DBconnect.php";
+    $dep = "HEAD";
+    $obj = new DB();
+    $obj->insertrecords($dep);
+    echo "done";*/
 
 }
 ?>
