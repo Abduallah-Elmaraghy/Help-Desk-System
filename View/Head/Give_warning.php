@@ -12,11 +12,11 @@
 			<h1>Give Warning</h1>
 			<div class="table_row">
 				<div class="table_col">
-					<label>Case number</label>
+					
                     <label>intended person</label>
 				</div>
 				<div class="table_col">
-					<label>IT450-650</label>
+					
                     <label>Ahmed mohamed</label>
 				</div>
 			</div>
