@@ -1,9 +1,17 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
-	<body>
-		<?php include '../../includes/navUser.php';?>
+
+
+<?php
+class Caseview_user extends view
+{
+
+  public function output()
+  {
+   
+   require APPROOT.'/views/inc/navUser.php';
+   
+      $text = <<<EOT
+ 
+  <body>
 		<form method="post" class="view_card">
 			<h1>Case Details</h1>
 			<h2>Case information</h2>
@@ -108,31 +116,10 @@
 					<label>Changed status from pending to opened</label>
 				</div>
 			</div>
-			<!--
-<h2>Attachments</h2>
-<div class="table_row">
-<div class="table_col">
-<label>Action</label>
-<label>Edit | View | Delete</label>
-</div>
-<div class="table_col">
-<label>File name</label>
-<label>Capture01.PNG</label>
-</div>
-<div class="table_col">
-<label>Last modified</label>
-<label>12/5/2021</label>
-</div>
-<div class="table_col">
-<label>Size</label>
-<label>30KB</label>
-</div>
-<div class="table_col">
-<label>Created by</label>
-<label>Alaa Fadel</label>
-</div>
-</div>
--->
 		</form> 
 	</body>
-</html>
+EOT;
+    echo $text;
+ 
+  }
+}

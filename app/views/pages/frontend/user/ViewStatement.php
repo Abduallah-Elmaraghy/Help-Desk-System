@@ -1,9 +1,16 @@
-<html>
-	<header>
-		<title>Updload statement</title>
-		<link rel="stylesheet" href="../../style sheets/stylesheet.css">
-	</header>
-	<body>
+
+<?php
+class ViewStatement extends view
+{
+
+  public function output()
+  {
+   
+  require APPROOT.'/views/inc/navUser.php';
+   
+      $text = <<<EOT
+ 
+<body>
 		<?php
 		include "../../includes/navUser.php";
 		?>
@@ -42,4 +49,8 @@
 			</div>
 		</form> 
 	</body>
-</html>
+EOT;
+    echo $text;
+ 
+  }
+}

@@ -1,9 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
-	<body>
+
+
+<?php
+class NewCase extends view
+{
+
+  public function output()
+  {
+   
+  require APPROOT.'/views/inc/navUser.php';
+   
+      $text = <<<EOT
+ 
+ <body>
 		<?php include '../../includes/navUser.php';?>
 		<form method="post" class="view_card">
 			<h1>New Case</h1>
@@ -66,4 +74,8 @@
 			</div>
 		</form> 
 	</body>
-</html>
+EOT;
+    echo $text;
+ 
+  }
+}
