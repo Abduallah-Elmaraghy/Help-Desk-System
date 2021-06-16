@@ -1,3 +1,16 @@
+<?php
+class CaseView extends view
+{
+
+  public function output()
+  {
+
+$action = "";//= URLROOT . 'public/users/login';
+require APPROOT.'/views/inc/navAdmin.php';
+//		<div class="triangle-left"></div>
+//<div class="triangle-right"></div>
+$case= $this->model->CaseView();
+$text = '
 <html>
 	<header>
 		<title>Updload statement</title>
@@ -67,3 +80,8 @@
 		</form> 
 	</body>
 </html>
+  ';
+echo $text;
+}
+
+}
