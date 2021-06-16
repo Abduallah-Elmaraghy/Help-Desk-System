@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\style sheets\stylesheet.css">
-		<script src="../js/Livesearch.js"></script>
-	</head>
-	<body>
-		<?php 
-		include "../includes/navAdmin.php";
-		?>
+<?php
+class ViewAdminsHead extends view
+{
+
+	public function output()
+	{
+
+		$action = "";//= URLROOT . 'public/users/login';
+
+		require APPROOT.'/views/inc/navHead.php';
+
+		$text = <<<EOT
+
+  <body>
 		<h2 style="margin-left: 100px;">Filters</h2>
 		<div class="Filters">
 			<select class="filter">
@@ -108,4 +112,8 @@
 			</div>
 		</div>
 	</body>
-</html>
+EOT;
+		echo $text;
+
+	}
+}

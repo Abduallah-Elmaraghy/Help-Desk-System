@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
-	<body>
-		<?php include "../../includes/navHead.php";?>
+<?php
+class EscalationsHead extends view
+{
+
+	public function output()
+	{
+
+		$action = "";//= URLROOT . 'public/users/login';
+
+		require APPROOT.'/views/inc/navHead.php';
+
+		$text = <<<EOT
+
+  <body>
 		<h2 style="margin-left: 100px;">Filters</h2>
 		<div class="Filters">
 			<select class="filter">
@@ -159,4 +166,8 @@
 			</div>
 		</div>
 	</body>
-</html>
+EOT;
+		echo $text;
+
+	}
+}

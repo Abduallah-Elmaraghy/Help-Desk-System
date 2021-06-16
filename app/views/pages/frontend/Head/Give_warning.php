@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="../../style sheets/stylesheet.css">
-		<script src="../js/Livesearch.js"></script>
-	</head>
-	<body>
-		<?php 
-		include "../../includes/navHead.php";
-		?>
+<?php
+class GiveWarningsHead extends view
+{
+
+	public function output()
+	{
+
+		$action = "";//= URLROOT . 'public/users/login';
+
+		require APPROOT.'/views/inc/navHead.php';
+		$text = <<<EOT
+
+  <body>
 		<form method="post" class="view_card">
 			<h1>Give Warning</h1>
 			<div class="table_row">
@@ -42,4 +45,8 @@
 			</div>
 		</form> 
 	</body>
-</html>
+EOT;
+		echo $text;
+
+	}
+}

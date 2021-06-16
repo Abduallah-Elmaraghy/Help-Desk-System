@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
-	<body>
-		<?php include '../../includes/navUser.php';?>
+<?php
+class EscalationDetailsHead extends view
+{
+
+	public function output()
+	{
+
+		$action = "";//= URLROOT . 'public/users/login';
+
+		require APPROOT.'/views/inc/navHead.php';
+
+		$text = <<<EOT
+
+  <body>
 		<form method="post" class="view_card" action="Give_warning.php">
 			<h1>View Escalation</h1><br>
 			<div class="table_row">
@@ -36,4 +43,8 @@
 			</div>
 		</form>
 	</body>
-</html>
+EOT;
+		echo $text;
+
+	}
+}
