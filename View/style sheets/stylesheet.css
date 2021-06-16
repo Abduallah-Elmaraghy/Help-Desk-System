@@ -28,7 +28,13 @@ body
 {
 	display: flex;
 	flex-direction: row;
-	padding: 20px;
+	padding: 10px;
+}
+
+.table_row label 
+{
+	margin: 5px;
+	width: 90px;
 }
 
 .table_col 
@@ -63,13 +69,14 @@ body
 	border: none;
 	border-radius: 20px;
 	background-color: #eeebdd;
+	outline: none;
 }
 
 .table_col select
 {
 	padding-left: 10px;
 	margin: 15px 20px 20px 0px;
-	width:150px	;
+	width: 200px;
 	border-radius: 30px;
 	border: none;
 	height:30px;
@@ -228,7 +235,6 @@ input[type="submit"]:hover
 	width: 70%;
 	margin-top: 25px;
 	margin-left: 15%;
-	text-align: center;
 	display: flex;
 	flex-direction: row;
 	padding: 20px 50px 20px 50px;
@@ -310,23 +316,32 @@ input[type="submit"]:hover
 	margin-left: 50px;
 }
 
+.files_info_view
+{
+	width: 100%;
+	margin-left: 10%;
+	padding: 0px 10px;
+	background-color: #1B1717;
+	border: 2px solid #EEEBDD;
+	color: #EEEBDD;
+	border-radius: 20px;
+}
 
 textarea 
 {
 	padding-left: 10px;
+	padding-top: 5px;
 	margin: 15px 20px 20px 0px;
-	width: 520px;
-	border-radius: 30px;
+	width: 500px;
+	border-radius: 15px;
 	border: none;
-	height: 30px;
 	background-color: #eeebdd;
+	outline: none;
 }
 
 
 .addAttachment
 {
-	/*	margin-left: 45px;*/
-	/*	margin-bottom: 20px;*/
 	display: flex;
 	flex-direction: column;
 }
@@ -336,11 +351,14 @@ textarea
 	display: none;
 	background-color:#eeebdd;
 	cursor: pointer;
+	outline: none;
 }
 
 .addAttachment .attachment_label
 {
-	width: 160px;
+	width: 90px;
+	font-size: 12px;
+	font-weight: bold;
 	padding: 7px;
 	color: #1b1717;
 	background-color:#eeebdd;
@@ -359,4 +377,80 @@ textarea
 	float: left;
 	width: 50%;
 	margin-top: 60px;	
+}
+
+.viewcases
+{
+	width: 80%; 
+	margin: 10%;	
+	padding-bottom: 20px;
+	margin-top: 75px;
+	border-radius: 15px;
+	background-color: #1B1717;
+	color: #EEEBDD;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.viewcases h2	
+{
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+
+#quick_access
+{
+	width: 100%;
+	border: none;
+	color: #EEEBDD;	
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;	
+}
+
+td, th
+{
+	padding: 8px;
+	text-align: center;
+}
+
+tr:not(:nth-child(0))
+{
+	border-bottom: 1px solid white;
+	padding-left: 4px;
+	padding-right: 4px;
+}	  
+
+a
+{
+	text-decoration: none;
+	color: #EEEBDD;	
+}
+
+tr:hover ~ a:hover
+{
+	color: #1B1717;	
+	text-decoration: none;
+	background-color: #EEEBDD;
+}
+
+th
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #630000;
+	color: white;
+}
+
+#myInput
+{
+	background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+	background-position: 10px 12px; /* Position the search icon */
+	background-repeat: no-repeat; /* Do not repeat the icon image */
+	width: 90%; /* Full-width */
+	font-size: 16px; /* Increase font-size */
+	padding: 12px 20px 12px 40px; /* Add some padding */
+	border: 1px solid #ddd; /* Add a grey border */
+	margin-bottom: 12px; /* Add some space below the input */
+	margin-left: 5%;
 }

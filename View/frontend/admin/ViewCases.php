@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="..\style sheets\stylesheet.css">
+		<link rel="stylesheet" href="../../style sheets/stylesheet.css">
 	</head>
 	<body>
-		<?php include '../includes/navAdmin.php';?>
+		<?php include "../../includes/navAdmin.php";?>
 		<h2 style="margin-left: 100px;">Filters</h2>
 		<div class="Filters">
 			<select class="filter">
@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -35,7 +35,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -45,7 +45,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -65,7 +65,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -75,7 +75,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -95,7 +95,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -105,7 +105,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -115,7 +115,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -125,7 +125,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -135,7 +135,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -145,7 +145,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -155,7 +155,7 @@
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../recent%20cases.png">
+					<img src="../../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>

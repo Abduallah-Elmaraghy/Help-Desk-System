@@ -5,24 +5,22 @@
 	</header>
 	<body>
 		<?php
-		include "../../includes/navAdmin.php";
+		include "../../includes/navUser.php";
 		?>
 		<form method="post" class="view_card">
-			<h1>New Statement</h1>
+			<h1>Statement Details</h1>
 			<div class="table_row">
 				<div class="table_col">
 					<label>Subject</label>
 					<label>Type of problem</label>
 					<label>Problem definition</label>
+					<label>Description</label>	
 				</div>
 				<div class="table_col">
-					<input type="text">
-					<select>
-						<option>Network</option>
-						<option>System fail</option>
-						<option>Database</option>
-					</select>
-					<input type="text">
+					<label>Subject</label>
+					<label>Type of problem</label>
+					<label>Problem definition</label>
+					<label>Description</label>	
 				</div>
 				<div class="files_info_view">
 					<div class="table_row">
@@ -40,29 +38,7 @@
 						<label>20MB</label>
 						<label>docx</label>
 					</div>
-					<div class="table_row">
-						<div class="addAttachment">
-							<input type="file" id="file" accept="image/*">
-							<label for="file" class="attachment_label">
-								Add attachment
-							</label>
-						</div>
-					</div>
 				</div>
-			</div>
-			<div class="table_row">
-				<div class="table_col">
-					<label>
-						Description
-					</label>				
-				</div>
-				<div class="table_col">
-					<textarea type="text"> 
-					</textarea>				
-				</div>
-			</div>
-			<div class="submit">
-				<input type="submit">
 			</div>
 		</form> 
 	</body>

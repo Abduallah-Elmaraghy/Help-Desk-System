@@ -37,6 +37,13 @@
 				font-size: 20px;
 				display: flex;
 			}
+			
+			.logo img
+			{
+				padding: 5px;
+				margin-right: 5px;
+			}
+			
 			.logo h1
 			{
 				font-weight: 700;
@@ -75,7 +82,7 @@
 	<body>
 		<nav>			
 			<div class="logo">
-				<img src="..\logo.png" style="width:50px; hieght:40px;">
+				<img src="..\..\images\logo.png" style="width:50px; hieght:40px;">
 				<h1>Rashpetco</h1>
 			</div>
 			<ul class="nav_menu" id="sidenav">

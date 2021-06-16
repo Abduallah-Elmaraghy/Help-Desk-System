@@ -3,7 +3,6 @@
 	<head>
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
 			*
 			{
 				margin: 0;
@@ -38,6 +37,13 @@
 				font-size: 20px;
 				display: flex;
 			}
+
+			.logo img
+			{
+				padding: 5px;
+				margin-right: 5px;
+			}
+
 			.logo h1
 			{
 				font-weight: 700;
@@ -45,7 +51,7 @@
 
 			ul.nav_menu
 			{
-				width: 60%;
+				width: 70%;
 				display: flex;
 				justify-content: space-around;
 			}
@@ -72,12 +78,11 @@
 				color: #630000;
 			}
 		</style>
-
 	</head>
 	<body>
 		<nav>			
 			<div class="logo">
-				<img src="..\logo.png" style="width:50px; hieght:40px;">
+				<img src="..\..\images\logo.png" style="width:50px; hieght:40px;">
 				<h1>Rashpetco</h1>
 			</div>
 			<ul class="nav_menu" id="sidenav">
@@ -88,7 +93,7 @@
 					<a href="../head/ViewCases.php">View Cases</a>
 				</li>
 				<li>
-					<a href="#">Escalations</a>	
+					<a href="../head/Escalations.php">Escalations</a>	
 				</li>
 				<li>
 					<a href="../head/Statistics.php">Statistics</a>	

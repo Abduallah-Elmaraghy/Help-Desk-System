@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="..\style sheets\stylesheet.css">
+        <link rel="stylesheet" href="../../style sheets/stylesheet.css">
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
@@ -83,7 +83,7 @@
     </style>
     <body>
         <?php 
-        include "../includes/navAdmin.php";
+        include "../../includes/navAdmin.php";
         ?>
 
         <div class = combo>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="..\style sheets\stylesheet.css">
+		<link rel="stylesheet" href="../../style sheets/stylesheet.css">
 		<script src="../js/Livesearch.js"></script>
 	</head>
 	<body>
 		<?php 
-		include "../includes/navAdmin.php";
+		include "../../includes/navHead.php";
 		?>
 		<form method="post" class="view_card">
 			<h1>Give Warning</h1>

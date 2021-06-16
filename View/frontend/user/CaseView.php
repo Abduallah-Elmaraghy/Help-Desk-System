@@ -1,10 +1,9 @@
 <html>
-	<header>
-		<title>Case View</title>
-		<link rel="stylesheet" href="../style sheets/stylesheet.css">
-	</header>
+	<head>
+		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
+	</head>
 	<body>
-		<?php include '../includes/navUser.php';?>
+		<?php include '../../includes/navUser.php';?>
 		<form method="post" class="view_card">
 			<h1>Case Details</h1>
 			<h2>Case information</h2>

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="..\style sheets\stylesheet.css">
-		<link rel="stylesheet" href="..\style sheets\test.css">
-		<script src="../js/Livesearch.js"></script>
+		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
+		<script src="../../js/Livesearch.js"></script>
 	</head>
 	<body>
 		<?php
-		include "../includes/navAdmin.php";
+		include "../../includes/navAdmin.php";
 		?>
 		<h2 style="margin-left: 100px;">Pending Cases</h2>
 		<div class="pending_cases">
 			<div class="triangle-left"></div>
 			<div class="card">
-				<img src="../../recent%20cases.png">
+				<img src="../../images/recent%20cases.png">
 				<div class="card_body">
 					<h4>Case number :</h4>
 					<h4>Status :</h4>
@@ -21,7 +20,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img src="../../recent%20cases.png">
+				<img src="../../images/recent%20cases.png">
 				<div class="card_body">
 					<h4>Case number :</h4>
 					<h4>Status :</h4>
@@ -29,7 +28,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img src="../../recent%20cases.png">
+				<img src="../../images/recent%20cases.png">
 				<div class="card_body">
 					<h4>Case number :</h4>
 					<h4>Status :</h4>
@@ -39,10 +38,9 @@
 			<div class="triangle-right"></div>
 		</div>
 		<div class="viewcases">
-			<h2>Quick access</h2>
+			<h2>Cases  Quick  Access</h2>
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
-
-			<table id="customers">
+			<table id="quick_access">
 				<tr>
 					<th>Case-Number</th>
 					<th>Sevirity</th>

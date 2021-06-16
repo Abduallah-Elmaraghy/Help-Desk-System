@@ -5,8 +5,8 @@
 	</head>
 	<body>
 		<?php include '../../includes/navUser.php';?>
-		<form method="post" class="view_card">
-			<h1>Escalation</h1><br>
+		<form method="post" class="view_card" action="Give_warning.php">
+			<h1>View Escalation</h1><br>
 			<div class="table_row">
 				<div class="table_col">
 					<label>Case number</label>
@@ -27,12 +27,12 @@
 					<label>Description</label>
 				</div>
 				<div class="table_col">
-					<textarea type="text"></textarea>
-					<textarea type="text"></textarea>
+					<label>asjkdbkasdjcjbnsdkjabkdjsfv</label>
+					<label>cfedwajibsvbqaegbvruybuvs</label>
 				</div>
 			</div>
 			<div class="submit">
-				<input type="submit">
+				<input type="submit" value="Give warning">
 			</div>
 		</form>
 	</body>

@@ -1,10 +1,12 @@
 <html>
 	<header>
 		<title>New Case</title>
-		<link rel="stylesheet" href="..\style sheets\stylesheet.css">
+		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
 	</header>
 	<body>
-		<?php include '../includes/navAdmin.php';?>
+		<?php
+		include "../../includes/navAdmin.php";
+		?>
 		<form method="post" class="view_card">
 			<h1>Add User</h1>
 			<div class="table_row">
@@ -12,19 +14,20 @@
 					<label>First Name</label>
 					<label>Last Name</label>
 					<label>Email</label>
-					<label>Username</label>
+					<label>Gender</label>
 				</div>
 				<div class="table_col">
-<!--					<label>ahmed</label>-->
 					<input type="text">
 					<input type="text">
 					<input type="text">
-					<input type="text">
+					<select>
+						<option>Male</option>
+						<option>Femal</option>
+					</select>
 				</div>
 				<div class="table_col">
 					<label>Password</label>
 					<label>Confirm Password</label>
-					<label>Gender</label>
 					<label>Role</label>
 					<label>Department</label>
 				</div>
@@ -32,11 +35,15 @@
 					<input type="text">
 					<input type="text">
 					<select>
-						<option>Male</option>
-						<option>Femal</option>
+						<option>General Manager</option>
+						<option>CEO</option>
 					</select>
-					<input type="text">
-					<input type="text">
+					<select>
+						<option>IT</option>
+						<option>Media</option>
+						<option>HR</option>
+						<option>Accounting</option>
+					</select>
 				</div>
 			</div>
 			<div class="submit">
