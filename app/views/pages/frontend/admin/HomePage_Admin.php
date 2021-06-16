@@ -16,6 +16,7 @@ $text = <<<EOT
   <body>
 		<?php
 		?>
+
 		<h2 style="margin-left: 100px;">Pending Cases</h2>
 		<div class="pending_cases">
 			<div class="triangle-left"></div>
@@ -45,11 +46,11 @@ $text = <<<EOT
 			</div>
 			<div class="triangle-right"></div>
 		</div>
-		<div class="viewcases">
+		<form class="viewcases">
 			<h2>Quick access</h2>
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
 
-			<table id="customers">
+			<table class="quick_access" id="quick_access">
 				<tr>
 					<th>Case-Number</th>
 					<th>Sevirity</th>
@@ -100,7 +101,7 @@ $text = <<<EOT
 					<td><a href="#">Open</a></td>
 				</tr>
 			</table>
-		</div>
+		</form>
 	</body>
 EOT;
     echo $text;
