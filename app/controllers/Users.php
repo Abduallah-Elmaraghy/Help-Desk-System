@@ -92,10 +92,7 @@ class Users extends Controller
                 if ($loggedUser) 
                 {
                     if($userModel->login()->type_id==1){
-                        // $viewPath = VIEWS_PATH_ADMIN . 'HomePage.php';
-                        // require_once $viewPath;
-                        // $indexView = new HomePage($this->getModel(), $this);
-                        // $indexView->output();
+                        
                     header("location:".URLROOT."public/admins/HomePage");    
                     }
                      else if($userModel->login()->type_id==2){

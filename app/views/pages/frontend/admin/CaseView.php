@@ -9,7 +9,7 @@ $action = "";//= URLROOT . 'public/users/login';
 require APPROOT.'/views/inc/navAdmin.php';
 //		<div class="triangle-left"></div>
 //<div class="triangle-right"></div>
-
+$case= $this->model->CaseView();
 $text = '
 <html>
 <header>
@@ -23,14 +23,14 @@ $text = '
 		<h2>Case information</h2>
 		<div class="table_row">
 			<div class="table_col">
-				<label><b>Subject</b></label>
+				<label><b>subject</b></label>
 				<label><b>Case owner</b></label>
 				<label><b>Case priority</b></label>
 				<label><b>Severity</b></label>
 				<label><b>Description</b></label>
 			</div>
 			<div class="table_col">
-				<label>SAP application not working</label>
+				<label>'.$case->subject.'</label>
 				<label>Abduallah Elmaraghy</label>
 				<label>IT450-630</label>
 				<label>High</label>
