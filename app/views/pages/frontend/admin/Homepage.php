@@ -1,96 +1,83 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-		<script src="../../js/Livesearch.js"></script>
-	</head>
-	<body>
-		<?php
-		include "../../includes/navAdmin.php";
+<?php
+class HomePage extends view
+{
+
+  public function output()
+  {
+
+$action = "";//= URLROOT . 'public/users/login';
+require APPROOT.'/views/inc/navAdmin.php';
+//		<div class="triangle-left"></div>
+//<div class="triangle-right"></div>
+
+$text = '
+ 
+  <body>
+		<?php   
 		?>
-		<h2 style="margin-left: 100px;">Pending Cases</h2>
-		<div class="pending_cases">
-			<div class="triangle-left"></div>
-			<div class="card">
-				<img src="../../images/recent%20cases.png">
-				<div class="card_body">
-					<h4>Case number :</h4>
-					<h4>Status :</h4>
-					<input type="submit" value="Open">
-				</div>
-			</div>
-			<div class="card">
-				<img src="../../images/recent%20cases.png">
-				<div class="card_body">
-					<h4>Case number :</h4>
-					<h4>Status :</h4>
-					<input type="submit" value="Open">
-				</div>
-			</div>
-			<div class="card">
-				<img src="../../images/recent%20cases.png">
-				<div class="card_body">
-					<h4>Case number :</h4>
-					<h4>Status :</h4>
-					<input type="submit" value="Open">
-				</div>
-			</div>
-			<div class="triangle-right"></div>
-		</div>
-		<div class="viewcases">
-			<h2>Cases  Quick  Access</h2>
-			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
-			<table id="quick_access">
-				<tr>
-					<th>Case-Number</th>
-					<th>Sevirity</th>
-					<th>Pirority</th>
-					<th>Due date</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>Alfreds Futterkiste</td>
-					<td>Maria Anders</td>
-					<td>Germany</td>
-					<td>Germany</td>
-					<td><a href="">Open</a></td>
-				</tr>
-				<tr>
-					<td>Berglunds snabbköp</td>
-					<td>Christina Berglund</td>
-					<td>Sweden</td>
-					<td>Sweden</td>
-					<td><a href="#">Open</a></td>
-				</tr>
-				<tr>
-					<td>Ernst Handel</td>
-					<td>Roland Mendel</td>
-					<td>Austria</td>
-					<td>Austria</td>
-					<td><a href="#">Open</a></td>
-				</tr>
-				<tr>
-					<td>Island Trading</td>
-					<td>Helen Bennett</td>
-					<td>UK</td>
-					<td>UK</td>
-					<td><a href="#">Open</a></td>
-				</tr>
-				<tr>
-					<td>Königlich Essen</td>
-					<td>Philip Cramer</td>
-					<td>Germany</td>
-					<td>Germany</td>
-					<td><a href="#">Open</a></td>
-				</tr>
-				<tr>
-					<td>Paris spécialités</td>
-					<td>Marie Bertrand</td>
-					<td>France</td>
-					<td>France</td>
-					<td><a href="#">Open</a></td>
-				</tr>
-			</table>
-		</div>
-	</body>
-</html>
+
+<h2 style="margin-left: 100px;">Pending Cases</h2>
+
+<div class="pending_cases">
+    ';
+    foreach( $this->model->GetCases() as $case){
+        $case_number = $case->case_number;
+        $severity = $case->severity;
+        $priority = $case->priority;
+        $due_date = $case->due_date;
+        $status = $case->status;
+
+    $text.= '
+    <form method="post"action='.URLROOT.'admins/CaseView>
+    <div class="card">
+        <img src="../../recent%20cases.png">
+        <div class="card_body">
+            <h4>Case number : '.$case_number.'</h4>
+            <h4>Status : '.$status.'</h4>
+            <input type="submit" value="Open">
+        </div>
+    </div></form>
+';
+    }
+$text.='</div>
+
+</body>
+<form class="viewcases">
+    <h2>Quick access</h2>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
+
+    <table class="quick_access" id="quick_access">
+        <tr>
+            <th>Case Number</th>
+            <th>Sevirity</th>
+            <th>Pirority</th>
+            <th>Due date</th>
+            <th></th>
+        </tr>';
+
+        foreach( $this->model->GetCases() as $case){
+        $case_number = $case->case_number;
+        $severity = $case->severity;
+        $priority = $case->priority;
+        $due_date = $case->due_date;
+        $text.='
+
+        <tr>
+            <td>' .$case_number.'</td>
+            <td>' .$severity.'</td>
+            <td>' .$priority.'</td>
+            <td>' .$due_date.'</td>
+
+            <td><a href="">Open</a></td>
+        </tr>
+
+
+        ';
+        }
+        $text.='
+    </table>
+</form> ';
+echo $text;
+}
+
+}

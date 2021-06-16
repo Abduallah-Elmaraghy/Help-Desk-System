@@ -89,23 +89,27 @@ class Users extends Controller
             ) {
                 
                 $loggedUser = $userModel->login();
-                if ($loggedUser) {
+                if ($loggedUser) 
+                {
                     if($userModel->login()->type_id==1){
-                        $viewPath = VIEWS_PATH_ADMIN . 'HomePage_Admin.php';
-        require_once $viewPath;
-        $indexView = new Homepageadmin($this->getModel(), $this);
-        $indexView->output();
+                        // $viewPath = VIEWS_PATH_ADMIN . 'HomePage.php';
+                        // require_once $viewPath;
+                        // $indexView = new HomePage($this->getModel(), $this);
+                        // $indexView->output();
+                    header("location:".URLROOT."public/admins/HomePage");    
                     }
-               else if($userModel->login()->type_id==2){
+                     else if($userModel->login()->type_id==2){
          
-                $viewPath = VIEWS_PATH_USER . 'HomePage_Admin.php';
-                require_once $viewPath;
-                $indexView = new Homepageadmin($this->getModel(), $this);
-                $indexView->output();
-            }
+                        $viewPath = VIEWS_PATH_USER . 'HomePage_User.php';
+                        require_once $viewPath;
+                        $indexView = new Homepageadmin($this->getModel(), $this);
+                        $indexView->output();
+                        }
              if($userModel->login()->type_id==3){
-             die ("head");                           
-                    }
+                $viewPath = VIEWS_PATH_HEAD . 'HomepageHead.php';
+                require_once $viewPath;
+                $indexView = new HomepageHead($this->getModel(), $this);
+                $indexView->output();                    }
                 } else {
                     die('EROORRR');
                 }
@@ -136,4 +140,5 @@ class Users extends Controller
     {
         return isset($_SESSION['user_id']);
     }
+  
 }

@@ -16,11 +16,11 @@ class Pages extends Controller
         $indexView = new Homepageadmin($this->getModel(), $this);
         $indexView->output();  
     }
-    public function HomePage_User()
+    public function HomePage()
     {
-        $viewPath = VIEWS_PATH_USER . 'HomePage_User.php';
+        $viewPath = VIEWS_PATH_ADMIN . 'HomePage.php';
         require_once $viewPath;
-        $indexView = new Index($this->getModel(), $this);
+        $indexView = new HomePage($this->getModel(), $this);
         $indexView->output();
     }
    /* public function ViewProfile()
