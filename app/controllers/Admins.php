@@ -10,7 +10,8 @@ class Admins extends Controller
         $indexView->output();
     }
     
-    public function CaseView(){
+    public function CaseView()
+	{
         $viewPath = VIEWS_PATH_ADMIN . 'CaseView.php';
         require_once $viewPath;
         $indexView = new CaseView($this->getModel(), $this);

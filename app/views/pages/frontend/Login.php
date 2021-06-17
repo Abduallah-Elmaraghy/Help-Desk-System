@@ -2,16 +2,16 @@
 class Login extends view
 {
 
-  public function output()
-  {
-    //$title = $this->model->title;
-   // $data = $this->model->data;
-$action= URLROOT . 'public/users/login';
-//$css= APPROOT . 'public/style sheets/Loginpagestyle.css';
-    require APPROOT.'/views/inc/header.php';
-   
-      $text = <<<EOT
- 
+	public function output()
+	{
+		//$title = $this->model->title;
+		// $data = $this->model->data;
+		$action= URLROOT . 'public/users/login';
+		//$css= APPROOT . 'public/style sheets/Loginpagestyle.css';
+		require APPROOT.'/views/inc/header.php';
+
+		$text = <<<EOT
+
    <div class = "center" >
             <h1>Login</h1>
             <form method="post" action="$action">
@@ -32,7 +32,7 @@ $action= URLROOT . 'public/users/login';
             </form>
         </div>
 EOT;
-    echo $text;
- 
-  }
+		echo $text;
+
+	}
 }
