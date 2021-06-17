@@ -1,8 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
+
+
+<?php
+class ViewCases extends view
+{
+
+  public function output()
+  {
+   
+  require APPROOT.'/views/inc/navUser.php';
+   
+      $text = <<<EOT
+ 
 	<body>
 		<?php include "../../includes/navUSer.php";?>
 		<h2 style="margin-left: 100px;">Filters</h2>
@@ -165,4 +173,8 @@
 			</div>
 		</div>
 	</body>
-</html>
+EOT;
+    echo $text;
+ 
+  }
+}

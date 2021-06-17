@@ -2,7 +2,7 @@
 class Users extends Controller
 {
 
-	public function Add_User()
+		public function Add_User()
 	{
 		$registerModel = $this->getModel();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST')

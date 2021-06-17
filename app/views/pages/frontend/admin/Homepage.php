@@ -27,17 +27,17 @@ $text = '
         $due_date = $case->due_date;
         $status = $case->status;
 
-    $text.= '
-    <form method="post"action='.URLROOT.'admins/CaseView>
-    <div class="card">
-        <img src="../../recent%20cases.png">
-        <div class="card_body">
-            <h4>Case number : '.$case_number.'</h4>
-            <h4>Status : '.$status.'</h4>
-            <input type="submit" value="Open">
-        </div>
-    </div></form>
-';
+        $text.= '
+        <form method="post"action='.URLROOT.'public/admins/CaseView?id='. $case_number.'>
+        <div class="card">
+            <img src="../../recent%20cases.png">
+            <div class="card_body">
+                <h4>Case number : '.$case_number.'</h4>
+                <h4>Status : '.$status.'</h4>
+                <input type="submit" value="Open">
+            </div>
+        </div></form>
+    ';
     }
 $text.='</div>
 

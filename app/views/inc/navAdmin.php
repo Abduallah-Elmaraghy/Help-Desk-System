@@ -88,7 +88,7 @@
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
-					<a href= <?php echo URLROOT . 'public/users/login'?> >Home</a>
+					<a href= <?php echo URLROOT . 'public/admins/HomePage'?> >Home</a>
 				</li>
 				<li>
 					<a href="../admin/KnowledgeBase.php">Knowledge base</a>

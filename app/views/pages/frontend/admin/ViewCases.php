@@ -1,3 +1,16 @@
+<?php
+class CaseView extends view
+{
+
+  public function output()
+  {
+
+$action = "";//= URLROOT . 'public/users/login';
+require APPROOT.'/views/inc/navAdmin.php';
+//		<div class="triangle-left"></div>
+//<div class="triangle-right"></div>
+$case= $this->model->CaseView();
+$text = '
 <!DOCTYPE html>
 <html>
 	<head>
@@ -166,3 +179,8 @@
 		</div>
 	</body>
 </html>
+  ';
+echo $text;
+}
+
+}

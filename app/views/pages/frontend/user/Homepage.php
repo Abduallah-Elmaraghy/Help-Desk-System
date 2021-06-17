@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
-		
-	<body>
+
+<?php
+class HomepageUser extends view
+{
+
+  public function output()
+  {
+   
+  require APPROOT.'/views/inc/navUser.php';
+   
+      $text = <<<EOT
+ 
+ <body>
 		<?php
 		include "../../includes/navUser.php";;
 		?>
@@ -12,7 +18,7 @@
 		<div class="pending_cases">
 			<div class="triangle-left"></div>
 			<div class="card">
-				<img src="../../images/recent%20cases.png">
+				<img src="../../public/images/recent%20cases.png">
 				<div class="card_body">
 					<h4>Case number :</h4>
 					<h4>Status :</h4>
@@ -20,7 +26,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img src="../../images/recent%20cases.png">
+				<img src="../../public/images/recent%20cases.png">
 				<div class="card_body">
 					<h4>Case number :</h4>
 					<h4>Status :</h4>
@@ -28,7 +34,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<img src="../../images/recent%20cases.png">
+				<img src="../../public/images/recent%20cases.png">
 				<div class="card_body">
 					<h4>Case number :</h4>
 					<h4>Status :</h4>
@@ -93,4 +99,8 @@
 			</table>
 		</div>
 	</body>
-</html>
+EOT;
+    echo $text;
+ 
+  }
+}

@@ -1,3 +1,16 @@
+<?php
+class CaseView extends view
+{
+
+  public function output()
+  {
+
+$action = "";//= URLROOT . 'public/users/login';
+require APPROOT.'/views/inc/navAdmin.php';
+//		<div class="triangle-left"></div>
+//<div class="triangle-right"></div>
+$case= $this->model->CaseView();
+$text = '
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,12 +31,12 @@
       ]);*/
             function drawChart() {
                 var data = google.visualization.arrayToDataTable([
-                    ['Year', 'Number of Cases :', { role: 'style' } ],
-                    ['A', 5, 'color: gray'],
-                    ['B', 14, 'color: gray'],
-                    ['C', 7, 'color: gray'],
-                    ['D', 22, 'color: gray'],
-                    ['E', 50, 'color: gray']
+                    ["Year", "Number of Cases ":, { role: "style" } ],
+                    ["A", 5, color: "gray"],
+                    ["B", 14, color:"gray"],
+                    ["C", 7, color: "gray"],
+                    ["D", 22, color:"gray"],
+                    ["E", 50, color:"gray"]
                 ]);
 
                 var view = new google.visualization.DataView(data);
@@ -128,3 +141,9 @@
 
 
 
+
+  ';
+echo $text;
+}
+
+}

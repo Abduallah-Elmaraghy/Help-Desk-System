@@ -3,7 +3,23 @@
 	<head>
 		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
 	</head>
-	<body>
+	
+</html>
+
+
+
+<?php
+class EscalateCase extends view
+{
+
+  public function output()
+  {
+   
+  require APPROOT.'/views/inc/navUser.php';
+   
+      $text = <<<EOT
+ 
+ <body>
 		<?php include '../../includes/navUser.php';?>
 		<form method="post" class="view_card">
 			<h1>Escalation</h1><br>
@@ -36,4 +52,8 @@
 			</div>
 		</form>
 	</body>
-</html>
+EOT;
+    echo $text;
+ 
+  }
+}

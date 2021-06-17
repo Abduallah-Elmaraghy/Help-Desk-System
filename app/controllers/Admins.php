@@ -17,4 +17,5 @@ class Admins extends Controller
         $indexView = new CaseView($this->getModel(), $this);
         $indexView->output();
     }
+    
 }
