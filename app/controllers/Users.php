@@ -106,8 +106,12 @@ class Users extends Controller
                 $viewPath = VIEWS_PATH_HEAD . 'HomepageHead.php';
                 require_once $viewPath;
                 $indexView = new HomepageHead($this->getModel(), $this);
-                $indexView->output();                    }
-                } else {
+                $indexView->output();   }                 
+
+            $_SESSION['name']="mohamed";
+            }
+            
+            else {
                     die('EROORRR');
                 }
             }
