@@ -16,5 +16,22 @@ class Admins extends Controller
         $indexView = new CaseView($this->getModel(), $this);
         $indexView->output();
     }
-    
+    public function KnowledgeBase(){
+        $viewPath = VIEWS_PATH_ADMIN . 'KnowledgeBase.php';
+        require_once $viewPath;
+        $indexView = new KnowledgeBase($this->getModel(), $this);
+        $indexView->output();
+    }
+    public function AddUser(){
+        $viewPath = VIEWS_PATH_ADMIN . 'AddUser.php';
+        require_once $viewPath;
+        $indexView = new AddUser($this->getModel(), $this);
+        $indexView->output();
+    }
+    public function ViewCases(){
+        $viewPath = VIEWS_PATH_ADMIN . 'ViewCases.php';
+        require_once $viewPath;
+        $indexView = new ViewCases($this->getModel(), $this);
+        $indexView->output();
+    }    
 }

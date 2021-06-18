@@ -9,7 +9,6 @@ $action = "";//= URLROOT . 'public/users/login';
 require APPROOT.'/views/inc/navAdmin.php';
 //		<div class="triangle-left"></div>
 //<div class="triangle-right"></div>
-echo $_SESSION['name'];
 $text = '
  
   <body>

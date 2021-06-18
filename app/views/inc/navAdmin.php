@@ -91,13 +91,13 @@
 					<a href= <?php echo URLROOT . 'public/admins/HomePage'?> >Home</a>
 				</li>
 				<li>
-					<a href="../admin/KnowledgeBase.php">Knowledge base</a>
+					<a href=<?php echo URLROOT . 'public/admins/KnowledgeBase'?>>Knowledge base</a>
 				</li>
                 <li>
-					<a href="../admin/AddUser.php">Add Employee</a>
+					<a href=<?php echo URLROOT . 'public/admins/AddUser'?>>Add Employee</a>
 				</li>
 				<li>
-					<a href="../admin/ViewCases.php">View Cases</a>
+					<a href=<?php echo URLROOT . 'public/admins/ViewCases'?>>View Cases</a>
 				</li>
 				<li>
 					<a href="../admin/ViewStatistics.php">Statistics</a>	

@@ -1,7 +1,5 @@
-
-
 <?php
-class Homepageadmin extends view
+class AddUser extends view
 {
 
   public function output()
@@ -26,16 +24,16 @@ $text = <<<EOT
 		<h1>Add User</h1>
 		<div class="table_row">
 			<div class="table_col">
-				<label>First Name</label>
-				<label>Last Name</label>
+				<label>Username</label>
 				<label>Email</label>
+				<label>Phone</label>
 				<label>Gender</label>
 			</div>
 			<div class="table_col">
-				<input type="text">
-				<input type="text">
-				<input type="text">
-				<select>
+				<input type="text"name="username">
+				<input type="text"name="email">
+				<input type="text"name="phone">
+				<select name="gender">
 					<option>Male</option>
 					<option>Femal</option>
 				</select>
@@ -47,28 +45,29 @@ $text = <<<EOT
 				<label>Department</label>
 			</div>
 			<div class="table_col">
+				<input type="password"name="password">
 				<input type="text">
-				<input type="text">
-				<select>
-					<option>General Manager</option>
-					<option>CEO</option>
+				<select name="Role">
+					<option value='1'>General Manager</option>
+					<option value='2'>CEO</option>
 				</select>
-				<select>
-					<option>IT</option>
-					<option>Media</option>
-					<option>HR</option>
-					<option>Accounting</option>
+				<select name="department">
+					<option value="1">IT</option>
+					<option value ="2">Media</option>
+					<option value ="3">HR</option>
+					<option value ="4">Accounting</option>
 				</select>
 			</div>
 		</div>
 		<div class="submit">
-			<input type="submit">
+			<input type="submit" name="submit">
 		</div>
 	</form> 
 </body>
 </html>
 EOT;
     echo $text;
- 
+	$this->model->AddUser();
   }
+
 }

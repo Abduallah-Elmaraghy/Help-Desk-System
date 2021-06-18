@@ -59,7 +59,8 @@ body
 }
 
 .table_col input[type="date"],
-.table_col input[type="text"]
+.table_col input[type="text"],
+.table_col input[type="password"]
 {
 	margin: 15px 20px 20px 0px;
 	width: 200px;

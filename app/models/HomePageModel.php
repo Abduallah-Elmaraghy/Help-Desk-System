@@ -4,7 +4,8 @@ class HomePageModel extends CaseModel
 {
     public  $title = 'Admin Home Page';
 
-    public function GetCases(){
+    public function GetCases()
+    {
         $sql = 'SELECT *from company_cases';
         $fetch =  $this->dbh->query($sql);
         $record= $this->dbh->resultSet();
