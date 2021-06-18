@@ -2,14 +2,14 @@
 class ViewCases extends view
 {
 
-  public function output()
-  {
+	public function output()
+	{
 
-$action = "";//= URLROOT . 'public/users/login';
-require APPROOT.'/views/inc/navAdmin.php';
-//		<div class="triangle-left"></div>
-//<div class="triangle-right"></div>
-$text = '
+		$action = "";//= URLROOT . 'public/users/login';
+		require APPROOT.'/views/inc/navAdmin.php';
+		//		<div class="triangle-left"></div>
+		//<div class="triangle-right"></div>
+		$text = '
 <!DOCTYPE html>
 <html>
 	<head>
@@ -179,7 +179,7 @@ $text = '
 	</body>
 </html>
   ';
-echo $text;
-}
+		echo $text;
+	}
 
 }

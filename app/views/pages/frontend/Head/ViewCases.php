@@ -1,7 +1,6 @@
 <?php
 class ViewCasesHead extends view
 {
-
 	public function output()
 	{
 

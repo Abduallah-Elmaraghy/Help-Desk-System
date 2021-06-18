@@ -3,14 +3,8 @@ class CaseModel extends model
 {
     protected $CaseNumber;
     protected $Severity;
-
     protected $Priority;
 
-    
-    
-    
-        
-    
     public function __construct()
     {
         parent::__construct();
