@@ -2,15 +2,15 @@
 class CaseView extends view
 {
 
-  public function output()
-  {
+	public function output()
+	{
 
-$action = "";//= URLROOT . 'public/users/login';
-require APPROOT.'/views/inc/navAdmin.php';
-//		<div class="triangle-left"></div>
-//<div class="triangle-right"></div>
-$case= $this->model->CaseView();
-$text = '
+		$action = "";//= URLROOT . 'public/users/login';
+		require APPROOT.'/views/inc/navAdmin.php';
+		//		<div class="triangle-left"></div>
+		//<div class="triangle-right"></div>
+		$case= $this->model->CaseView();
+		$text = '
 <html>
 	<header>
 		<title>Updload statement</title>
@@ -19,7 +19,7 @@ $text = '
 	<body>
 		<?php
 		include "../../includes/navAdmin.php";
-		?>
+?>
 		<form method="post" class="view_card">
 			<h1>New Statement</h1>
 			<div class="table_row">
@@ -29,13 +29,13 @@ $text = '
 					<label>Problem definition</label>
 				</div>
 				<div class="table_col">
-					<input type="text">
-					<select>
+					<input type="text" name="subject">
+					<select name="TypeOfProblemId">
 						<option>Network</option>
 						<option>System fail</option>
 						<option>Database</option>
 					</select>
-					<input type="text">
+					<input type="text" name="problemDefinition">
 				</div>
 				<div class="files_info_view">
 					<div class="table_row">
@@ -70,7 +70,7 @@ $text = '
 					</label>				
 				</div>
 				<div class="table_col">
-					<textarea type="text"> 
+					<textarea type="text" name="description"> 
 					</textarea>				
 				</div>
 			</div>
@@ -81,7 +81,7 @@ $text = '
 	</body>
 </html>
   ';
-echo $text;
-}
+		echo $text;
+	}
 
 }
