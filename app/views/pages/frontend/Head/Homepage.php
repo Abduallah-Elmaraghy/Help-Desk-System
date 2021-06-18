@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="..\..\style sheets\stylesheet.css">
-	</head>
-	<body>
-		<?php 
-		include "../../includes/navHead.php";
-		?>
+<?php
+class HomePage extends view
+{
+
+	public function output()
+	{
+		$action = "";//= URLROOT . 'public/users/login';
+		require APPROOT.'/views/inc/navHead.php';
+		$text = <<<EOT
+  <body>
 		<h3 style="margin-left: 100px;">Escalations</h3>
 		<div class="pending_cases">
 			<div class="triangle-left"></div>
@@ -37,9 +38,10 @@
 			<div class="triangle-right"></div>
 		</div>
 		<div class="viewcases">
-			<h2>Cases  Quick  Access</h2>
+			<h2>Quick access</h2>
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
-			<table id="quick_access">
+
+			<table class="quick_access" id="quick_access">
 				<tr>
 					<th>Case-Number</th>
 					<th>Sevirity</th>
@@ -92,4 +94,8 @@
 			</table>
 		</div>
 	</body>
-</html>
+EOT;
+		echo $text;
+
+	}
+}

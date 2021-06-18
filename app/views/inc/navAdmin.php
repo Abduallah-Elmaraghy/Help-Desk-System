@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="stylesheet" href="../../public/style sheets/stylesheet.css">
+		<link rel="stylesheet" href="../../public/style sheets/stylesheet.css">
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 			*
@@ -38,13 +38,13 @@
 				font-size: 20px;
 				display: flex;
 			}
-			
+
 			.logo img
 			{
 				padding: 5px;
 				margin-right: 5px;
 			}
-			
+
 			.logo h1
 			{
 				font-weight: 700;
@@ -88,22 +88,22 @@
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
-					<a href= <?php echo URLROOT . 'public/admins/HomePage'?> >Home</a>
+					<a href='<?php echo URLROOT . 'public/admins/HomePage'?>'>Home</a>
 				</li>
 				<li>
-					<a href=<?php echo URLROOT . 'public/admins/KnowledgeBase'?>>Knowledge base</a>
-				</li>
-                <li>
-					<a href=<?php echo URLROOT . 'public/admins/AddUser'?>>Add Employee</a>
+					<a href='<?php echo URLROOT . 'public/admins/KnowledgeBase'?>'>Knowledge base</a>
 				</li>
 				<li>
-					<a href=<?php echo URLROOT . 'public/admins/ViewCases'?>>View Cases</a>
+					<a href='<?php echo URLROOT . 'public/admins/AddUser'?>'>Add Employee</a>
 				</li>
 				<li>
-					<a href="../admin/ViewStatistics.php">Statistics</a>	
+					<a href='<?php echo URLROOT . 'public/admins/ViewCases'?>'>View Cases</a>
 				</li>
 				<li>
-					<a href="../admin/UploadStatement.php">Upload Statement</a>	
+					<a href="../admin/ViewStatistics.php">Statistics</a>
+				</li>
+				<li>
+					<a href="../admin/UploadStatement.php">Upload Statement</a>
 				</li>
 			</ul>
 		</nav>	

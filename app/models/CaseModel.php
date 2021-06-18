@@ -1,87 +1,147 @@
 <?php
 class CaseModel extends model
 {
-    protected $CaseNumber;
-    protected $Severity;
-    protected $Priority;
+	protected $caseNumber;
+	protected $caseHolder;
+	protected $caseHolder_id;
+	protected $caseType;
+	protected $caseType_id;
+	protected $status;
+	protected $priority;
+	protected $severity;
+	protected $description;
+	protected $due_date;
+	protected $creation_date;
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->CaseNumber    = '';
-        $this->Severity = '';
-        $this->Pirority = '';
-      
-    }
+	public function __construct()
+	{
+		parent::__construct();
+		$this->CaseNumber = '';
+		$this->caseHolder = '';
+		$this->caseType = '';
+		$this->status = '';
+		$this->pirority = '';
+		$this->severity = '';
+		$this->description = '';
+		$this->due_date = '';
+		$this->creation_date = '';
+	}
 
-    public function getCaseNumber()
-    {
-        return $this->CaseNumber;
-    }
-    public function setCaseNumber($CaseNumber)
-    {
-        $this->CaseNumber = $CaseNumber;
-    }
+	//$caseNumber
+	public function getCaseNumber()
+	{
+		return $this->caseNumber;
+	}
 
-    public function getSeverity()
-    {
-        return $this->Severity;
-    }
-    public function setSeverity($Severity)
-    {
-        $this->Severity = $Severity;
-    }
+	public function setCaseNumber($caseNumber)
+	{
+		$this->caseNumber = $caseNumber;
+	}
 
-    public function getPriority()
-    {
-        return $this->Priority;
-    }
-    public function setPriority($Priority)
-    {
-        $this->Priority = $Priority;
-    }
-    
-    // //try
-    // public function getType()
-    // {
-    //     return $this->type;
-    // }
-    
-    
-    // //
-  
+	//$caseHolder
+//	public function getCaseHolder()
+//	{
+//		return $this->caseHolder;
+//	}
+//
+//	public function setCaseHolder($caseHolder)
+//	{
+//		$this->caseHolder = $caseHolder;
+//	}
 
-    
+	//$caseHolder_id
+	public function getCaseHolderId()
+	{
+		return $this->caseHolder_id;
+	}
 
-    // public function getEmailErr()
-    // {
-    //     return $this->emailErr;
-    // }
-    // public function setEmailErr($emailErr)
-    // {
-    //     $this->emailErr = $emailErr;
-    // }
+	public function setCaseHolderId($caseHolder_id)
+	{
+		$this->caseHolder_id = $caseHolder_id;
+	}
 
-    // public function getPasswordErr()
-    // {
-    //     return $this->passwordErr;
-    // }
-    // public function setPasswordErr($passwordErr)
-    // {
-    //     $this->passwordErr = $passwordErr;
-    // }
+	//$CaseType
+//	public function getCaseType()
+//	{
+//		return $this->caseType;
+//	}
+//
+//	public function setCaseType($caseType)
+//	{
+//		$this->caseType = $caseType;
+//	}
 
-    // public function findUserByEmail($email)
-    // {
-    //     $this->dbh->query('select * from user where mail= :email');
-    //     $this->dbh->bind(':email', $email);
+	//$CaseType_id
+	public function getCaseType()
+	{
+		return $this->CaseType_id;
+	}
 
-    //     $userRecord = $this->dbh->single();
-    //     return $this->dbh->rowCount();
-    // }
+	public function setCaseType($CaseType_id)
+	{
+		$this->CaseType_id = $CaseType_id;
+	}
 
-    // public function emailExist($email)
-    // {
-    //     return $this->findUserByEmail($email) > 0;
-    // }
+	//$status
+	public function getStatus()
+	{
+		return $this->status;
+	}
+
+	public function setStatus($status)
+	{
+		$this->status = $status;
+	}
+
+	//$priority
+	public function getPriority()
+	{
+		return $this->$priority;
+	}
+
+	public function setPriority($priority)
+	{
+		$this->priority = $priority;
+	}
+
+	//$severity
+	public function getSeverity()
+	{
+		return $this->severity;
+	}
+	public function setSeverity($severity)
+	{
+		$this->severity = $severity;
+	}
+
+	//$description
+	public function getDescription()
+	{
+		return $this->description;
+	}
+	public function setDescription($description)
+	{
+		$this->description = $description;
+	}
+
+	//$due_date
+	public function getDue_date()
+	{
+		return $this->due_date;
+	}
+	public function setDue_date($due_date)
+	{
+		$this->due_date = $due_date;
+	}
+	
+	//$creation_date
+	public function getCreation_date()
+	{
+		return $this->creation_date;
+	}
+	public function setCreation_date($creation_date)
+	{
+		$this->creation_date = $creation_date;
+	}
+
 }

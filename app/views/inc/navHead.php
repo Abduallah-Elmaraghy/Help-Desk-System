@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="../../public/style sheets/stylesheet.css">
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 			*
@@ -87,13 +88,13 @@
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
-					<a href="../head/Homepage.php">Home</a>
+					<a href='<?php echo URLROOT . 'public/heads/HomePage'?>'>Home</a>
 				</li>
 				<li>
-					<a href="../head/ViewCases.php">View Cases</a>
+					<a href='<?php echo URLROOT . 'public/heads/ViewCases'?>'>View Cases</a>
 				</li>
 				<li>
-					<a href="../head/Escalations.php">Escalations</a>	
+					<a href='<?php echo URLROOT . 'public/heads/ViewEscalations'?>'>Escalations</a>	
 				</li>
 				<li>
 					<a href="../head/Statistics.php">Statistics</a>	

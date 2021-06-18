@@ -4,9 +4,9 @@ class Heads extends Controller
 
 	public function HomePage()
 	{
-		$viewPath = VIEWS_PATH_HEAD . 'HomepageHead.php';
+		$viewPath = VIEWS_PATH_HEAD . 'HomePage.php';
 		require_once $viewPath;
-		$indexView = new HomepageHead($this->getModel(), $this);
+		$indexView = new HomePage($this->getModel(), $this);
 		$indexView->output(); 
 	}
 
@@ -30,7 +30,7 @@ class Heads extends Controller
 	{
 		$viewPath = VIEWS_PATH_HEAD . 'Escalations.php';
 		require_once $viewPath;
-		$indexView = new CaseViewHead($this->getModel(), $this);
+		$indexView = new Escalations($this->getModel(), $this);
 		$indexView->output();
 	}
 	
@@ -38,7 +38,7 @@ class Heads extends Controller
 	{
 		$viewPath = VIEWS_PATH_HEAD . 'ViewAdmins.php';
 		require_once $viewPath;
-		$indexView = new CaseViewHead($this->getModel(), $this);
+//		$indexView = new CaseView($this->getModel(), $this);
 		$indexView->output();
 	}
 	
@@ -46,7 +46,7 @@ class Heads extends Controller
 	{
 		$viewPath = VIEWS_PATH_HEAD . 'ViewCases.php';
 		require_once $viewPath;
-		$indexView = new CaseViewHead($this->getModel(), $this);
+		$indexView = new ViewCases($this->getModel(), $this);
 		$indexView->output();
 	}
 }

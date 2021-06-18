@@ -1,5 +1,5 @@
 <?php
-class ViewCasesHead extends view
+class ViewCases extends view
 {
 	public function output()
 	{

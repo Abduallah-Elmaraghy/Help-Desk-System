@@ -9,7 +9,7 @@ define('DB_NAME', 'help_desk_system');
 //echo dirname(dirname(__FILE__));
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL Root
-define('URLROOT', 'http://localhost/Help-Desk-System/');
+define('URLROOT', 'http://localhost/help-desk-system/');
 // Site Name
 define('SITENAME', 'Help Desk System');
 
