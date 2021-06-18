@@ -67,10 +67,8 @@ $text.='</div>
             <td>' .$priority.'</td>
             <td>' .$due_date.'</td>
 
-            <td><a href="">Open</a></td>
+            <td><a href='.URLROOT.'public/admins/CaseView?id='. $case_number.'>Open</a></td>
         </tr>
-
-
         ';
         }
         $text.='

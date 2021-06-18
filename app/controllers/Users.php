@@ -51,6 +51,7 @@ class Users extends Controller
                 {
                     
                     flash('register_success', 'You have registered successfully');
+                  
                     header("location:".URLROOT."public/admins/HomePage");    
                 } else
                 {
@@ -101,7 +102,6 @@ class Users extends Controller
                     header("location:".URLROOT."public/admins/HomePage");    
                     }
                      else if($userModel->login()->type_id==2){
-         
                         $viewPath = VIEWS_PATH_USER . 'HomePage_User.php';
                         require_once $viewPath;
                         $indexView = new Homepageadmin($this->getModel(), $this);
@@ -124,7 +124,7 @@ class Users extends Controller
        
       
     }
-    
+
     public function createUserSession($user)
     {
         $_SESSION['user_id'] = $user->id;

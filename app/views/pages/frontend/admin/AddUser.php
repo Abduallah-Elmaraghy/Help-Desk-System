@@ -20,7 +20,7 @@ $text = <<<EOT
 	<?php
 	include "../../includes/navAdmin.php";
 	?>
-	<form method="post" class="view_card">
+	<form method="post" class="view_card"action='$action'>
 		<h1>Add User</h1>
 		<div class="table_row">
 			<div class="table_col">
