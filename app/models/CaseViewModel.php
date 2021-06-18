@@ -2,7 +2,6 @@
 require_once 'CaseModel.php';
 class CaseViewModel extends CaseModel
 {
-	public  $title = 'Admin Home Page';
 
 	public function GetCases()
 	{

@@ -1,28 +1,30 @@
-<?php
+<?php       
 class Users extends Controller
 {
-    public function Add_User()
+    public function AddUser()
     {
         $registerModel = $this->getModel();
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
           
-            $registerModel->setName(trim($_POST['username']));
-            $registerModel->setemail(trim($_POST['email']));
+            $registerModel->setUsername(trim($_POST['username']));
+            $registerModel->setEmail(trim($_POST['email']));
             $registerModel->setPassword(trim($_POST['password']));
             $registerModel->setConfirmPassword(trim($_POST['confirm_password']));
-            $registerModel->setMobile(trim($_POST['Mobile']));
-            $registerModel->setDepartment(trim($_POST['Department']));
-            $registerModel->setType(trim($_POST['Type']));
-            $registerModel->setPosition(trim($_POST['Postion']));
-            $registerModel->setprofilePicture(trim($_POST['Profile_Picture']));
+            $registerModel->setMobile(trim($_POST['phone']));
+         $registerModel->setDepartment(trim(1));
+            $registerModel->setType(trim(1));
+            $registerModel->setPosition(trim(1));
+            $registerModel->setPP(trim('s'));
 
             
-            if (empty($registerModel->getName())) {
+            if (empty($registerModel->getUsername()) ) {
                 $registerModel->setNameErr('Please enter a name');
             }
             if (empty($registerModel->getEmail())) {
                 $registerModel->setEmailErr('Please enter an email');
-            } elseif ($registerModel->emailExist($_POST['email'])) {
+            } 
+            elseif ($registerModel->emailExist($_POST['email'])) {
                 $registerModel->setEmailErr('Email is already registered');
             }
             if (empty($registerModel->getPassword())) {
@@ -36,19 +38,22 @@ class Users extends Controller
             }
 
             if (
-                empty($registerModel->getNameErr()) &&
+              
                 empty($registerModel->getEmailErr()) &&
                 empty($registerModel->getPasswordErr()) &&
                 empty($registerModel->getConfirmPasswordErr())
-            ) {
+            ) 
+            {
                 
                 $registerModel->setPassword(password_hash($registerModel->getPassword(), PASSWORD_DEFAULT));
 
-                if ($registerModel->signup()) {
+                if ($registerModel->AddUser()) 
+                {
                     
                     flash('register_success', 'You have registered successfully');
-                    redirect('users/login');
-                } else {
+                    header("location:".URLROOT."public/admins/HomePage");    
+                } else
+                {
                     die('Error in sign up');
                 }
             }
@@ -56,7 +61,7 @@ class Users extends Controller
        
         $viewPath = VIEWS_PATH_ADMIN . 'AddUser.php';
         require_once $viewPath;
-        $view = new Register($this->getModel(), $this);
+        $view = new AddUser($this->getModel(), $this);
         $view->output();
     }
     public function login()
@@ -119,7 +124,7 @@ class Users extends Controller
        
       
     }
-
+    
     public function createUserSession($user)
     {
         $_SESSION['user_id'] = $user->id;

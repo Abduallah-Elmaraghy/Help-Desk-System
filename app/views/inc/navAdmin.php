@@ -94,7 +94,7 @@
 					<a href='<?php echo URLROOT . 'public/admins/KnowledgeBase'?>'>Knowledge base</a>
 				</li>
 				<li>
-					<a href='<?php echo URLROOT . 'public/admins/AddUser'?>'>Add Employee</a>
+					<a href='<?php echo URLROOT . 'public/users/AddUser'?>'>Add Employee</a>
 				</li>
 				<li>
 					<a href='<?php echo URLROOT . 'public/admins/ViewCases'?>'>View Cases</a>

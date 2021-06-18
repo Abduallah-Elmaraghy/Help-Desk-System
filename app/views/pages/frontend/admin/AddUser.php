@@ -46,7 +46,7 @@ $text = <<<EOT
 			</div>
 			<div class="table_col">
 				<input type="password"name="password">
-				<input type="text">
+				<input type="password"name="confirm_password">
 				<select name="Role">
 					<option value='1'>General Manager</option>
 					<option value='2'>CEO</option>
@@ -67,7 +67,6 @@ $text = <<<EOT
 </html>
 EOT;
     echo $text;
-	$this->model->AddUser();
   }
 
 }
