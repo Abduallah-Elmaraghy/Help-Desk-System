@@ -9,14 +9,16 @@ class Pages extends Controller
         $Loginview = new Login($this->getModel(), $this);
         $Loginview->output();
     }
-     public function HomePage_Admin()
+    
+	public function HomePage_Admin()
     {
         $viewPath = VIEWS_PATH_ADMIN . 'HomePage_Admin.php';
         require_once $viewPath;
         $indexView = new Homepageadmin($this->getModel(), $this);
         $indexView->output();  
     }
-    public function HomePage()
+    
+	public function HomePage()
     {
         $viewPath = VIEWS_PATH_ADMIN . 'HomePage.php';
         require_once $viewPath;

@@ -5,24 +5,15 @@ class UserModel extends model
     protected $password;
     //try
     protected $type;
-   //
-
-    protected $emailErr;
+	protected $emailErr;
     protected $passwordErr;
 
-    
-    
-    
-        
-    
     public function __construct()
     {
         parent::__construct();
         $this->email    = '';
         $this->password = '';
-        $this->type = '';
-      
-        
+        $this->type = '';       
         $this->emailErr    = '';
         $this->passwordErr = '';
     }
@@ -31,7 +22,8 @@ class UserModel extends model
     {
         return $this->email;
     }
-    public function setEmail($email)
+    
+	public function setEmail($email)
     {
         $this->email = $email;
     }
@@ -40,7 +32,8 @@ class UserModel extends model
     {
         return $this->password;
     }
-    public function setPassword($password)
+    
+	public function setPassword($password)
     {
         $this->password = $password;
     }
@@ -50,18 +43,13 @@ class UserModel extends model
     {
         return $this->type;
     }
-    
-    
-    //
-  
-
-    
-
+   
     public function getEmailErr()
     {
         return $this->emailErr;
     }
-    public function setEmailErr($emailErr)
+    
+	public function setEmailErr($emailErr)
     {
         $this->emailErr = $emailErr;
     }
@@ -70,7 +58,8 @@ class UserModel extends model
     {
         return $this->passwordErr;
     }
-    public function setPasswordErr($passwordErr)
+    
+	public function setPasswordErr($passwordErr)
     {
         $this->passwordErr = $passwordErr;
     }
@@ -79,7 +68,6 @@ class UserModel extends model
     {
         $this->dbh->query('select * from user where mail= :email');
         $this->dbh->bind(':email', $email);
-
         $userRecord = $this->dbh->single();
         return $this->dbh->rowCount();
     }

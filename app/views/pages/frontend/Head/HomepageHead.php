@@ -4,13 +4,9 @@ class HomepageHead extends view
 
 	public function output()
 	{
-
 		$action = "";//= URLROOT . 'public/users/login';
-
 		require APPROOT.'/views/inc/navHead.php';
-
 		$text = <<<EOT
-
   <body>
 		<h3 style="margin-left: 100px;">Escalations</h3>
 		<div class="pending_cases">
