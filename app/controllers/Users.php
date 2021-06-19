@@ -103,21 +103,20 @@ class Users extends Controller
 					}
 					else if($userModel->login()->type_id==2)
 					{
-						$viewPath = VIEWS_PATH_USER . 'HomePage_User.php';
-						require_once $viewPath;
-						$indexView = new Homepageadmin($this->getModel(), $this);
-						$indexView->output();
+                        header("location:".URLROOT."public/pages/HomePage");    
+
 					}
-					if($userModel->login()->type_id==3)
+					else if($userModel->login()->type_id==3)
 					{
 						header("location:".URLROOT."public/Heads/HomePage");    
 					}                 
-				}
-
-				else {
-					die('EROORRR');
-				}
-			}
+                    
+                }
+                    
+               
+                }
+                
+            
 		}
 
 
