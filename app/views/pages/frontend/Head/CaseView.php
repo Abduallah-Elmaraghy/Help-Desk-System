@@ -1,5 +1,5 @@
 <?php
-class CaseViewHead extends view
+class CaseView extends view
 {
 
 	public function output()
