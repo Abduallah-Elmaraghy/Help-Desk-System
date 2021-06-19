@@ -43,6 +43,7 @@ class ViewCases extends view
     $status = $case->status;
 
     $text.='
+    <form method="post"action='.URLROOT.'public/admins/CaseView?id='. $case_number.'>
     <div class="column">
         <div class="card">
             <img src="../../images/recent%20cases.png">
@@ -53,7 +54,7 @@ class ViewCases extends view
             </div>
         </div>
     </div>
-
+</form>
 ';
 }
 $text.='</div>

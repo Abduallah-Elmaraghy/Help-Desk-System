@@ -33,6 +33,7 @@ $text = '
 foreach($this->model->GetStatements() as $knowledge){
 $knowledge_type= $this->model->GetType($knowledge->Type_id);   
 $text.='
+<form method="post" action='.URLROOT.'public/admins/ViewStatement?id='. $knowledge->statement_id.'>
     <div class="column">
         <div class="card">
             <div class="card_body">

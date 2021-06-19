@@ -10,12 +10,6 @@ class KnowledgeBaseModel extends model
 		//var_dump ( $record);
 		return $record;
 	}
-    public function GetType($id){
-        $sql='SELECT * from case_types where case_type_id ='.$id.' ';
-        $fetch =  $this->dbh->query($sql);
-        $record= $this->dbh->single();
-        return $record;
-    }
 	public function ViewStatement()
 	{
 		if(isset($_GET['id']))		{
@@ -26,7 +20,12 @@ class KnowledgeBaseModel extends model
 			return $record;
 		}
 	}
-	
+	public function GetType($id){
+        $sql='SELECT * from case_types where case_type_id ='.$id.' ';
+        $fetch =  $this->dbh->query($sql);
+        $record= $this->dbh->single();
+        return $record;
+    }
 	public function UploadStatement()
 	{
 		if(isset($_POST['submit']))

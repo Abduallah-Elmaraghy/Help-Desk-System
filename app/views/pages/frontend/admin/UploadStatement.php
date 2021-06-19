@@ -1,5 +1,5 @@
 <?php
-class CaseView extends view
+class UploadStatement extends view
 {
 
 	public function output()
@@ -9,7 +9,6 @@ class CaseView extends view
 		require APPROOT.'/views/inc/navAdmin.php';
 		//		<div class="triangle-left"></div>
 		//<div class="triangle-right"></div>
-		$case= $this->model->CaseView();
 		$text = '
 <html>
 	<header>
@@ -81,6 +80,7 @@ class CaseView extends view
 	</body>
 </html>
   ';
+  $this->model->UploadStatement();
 		echo $text;
 	}
 

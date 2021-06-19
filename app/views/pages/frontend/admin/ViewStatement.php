@@ -7,8 +7,9 @@ class ViewStatement extends view
 	{
 		require APPROOT.'/views/inc/navAdmin.php';
 
-
-		$text = <<<EOT
+$statement=$this->model->StatementView();
+$type=$this->model->GetType($statement->Type_id);
+		$text = '
 
 <body>
 		<?php
@@ -24,10 +25,10 @@ class ViewStatement extends view
 					<label>Description</label>	
 				</div>
 				<div class="table_col">
-					<label>Subject</label>
-					<label>Type of problem</label>
-					<label>Problem definition</label>
-					<label>Description</label>	
+					<label>'.$statement->subject.'</label>
+					<label>'.$type->case_type.'</label>
+					<label>'.$statement->problem_definition.'</label>
+					<label>'.$statement->description.'</label>
 				</div>
 				<div class="files_info_view">
 					<div class="table_row">
@@ -49,7 +50,7 @@ class ViewStatement extends view
 			</div>
 		</form> 
 	</body>
-EOT;
+';
 		echo $text;
 
 	}

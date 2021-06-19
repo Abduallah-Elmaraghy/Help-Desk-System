@@ -100,7 +100,8 @@ class Users extends Controller
                     if($userModel->login()->type_id==1){
                         
                     header("location:".URLROOT."public/admins/HomePage");    
-                    }
+                    
+                }
                      else if($userModel->login()->type_id==2){
                         $viewPath = VIEWS_PATH_USER . 'HomePage_User.php';
                         require_once $viewPath;
@@ -113,7 +114,6 @@ class Users extends Controller
                 $indexView = new HomepageHead($this->getModel(), $this);
                 $indexView->output();   }                 
 
-            $_SESSION['name']="mohamed";
             }
             
             else {
