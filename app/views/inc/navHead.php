@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="../../public/style sheets/stylesheet.css">
+		<link rel="stylesheet" href="../style sheets/stylesheet.css">
+		<script src="../js/Livesearch.js"></script>
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 			*
@@ -83,7 +84,7 @@
 	<body>
 		<nav>			
 			<div class="logo">
-				<img src="..\..\images\logo.png" style="width:50px; hieght:40px;">
+				<img src="../images/logo.png" style="width:50px; hieght:40px;">
 				<h1>Rashpetco</h1>
 			</div>
 			<ul class="nav_menu" id="sidenav">
@@ -94,10 +95,10 @@
 					<a href='<?php echo URLROOT . 'public/heads/ViewCases'?>'>View Cases</a>
 				</li>
 				<li>
-					<a href='<?php echo URLROOT . 'public/heads/ViewEscalations'?>'>Escalations</a>	
+					<a href='<?php echo URLROOT . 'public/heads/Escalations'?>'>Escalations</a>	
 				</li>
 				<li>
-					<a href="../head/Statistics.php">Statistics</a>	
+					<a href='<?php echo URLROOT . 'public/heads/GiveWarning'?>'>GiveWarning</a>	
 				</li>
 			</ul>
 		</nav>	

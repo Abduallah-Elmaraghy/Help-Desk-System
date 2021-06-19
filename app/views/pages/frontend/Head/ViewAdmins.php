@@ -1,5 +1,5 @@
 <?php
-class ViewAdmins extends view
+class ViewAdminsHead extends view
 {
 
 	public function output()

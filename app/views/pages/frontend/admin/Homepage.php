@@ -19,7 +19,7 @@ $text = '
 
 <div class="pending_cases">
     ';
-    foreach( $this->model->GetCases() as $case){
+    foreach( $this->model->GetPendingCases() as $case){
         $case_number = $case->case_number;
         $severity = $case->severity;
         $priority = $case->priority;

@@ -16,10 +16,11 @@ class CaseViewModel extends CaseModel
 		if(isset($_GET['id']))
 		{
 			$id=$_GET['id'];
-
 			$sql='SELECT * from company_cases WHERE case_number = '.$id.'';
+			//$this->dbh->bind(':id', $id);  
 			$fetch =  $this->dbh->query($sql);
 			$record = $this->dbh->single(); 
+			var_dump($record->case_number);
 			return $record;
 		}
 	}

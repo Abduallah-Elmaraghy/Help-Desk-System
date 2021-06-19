@@ -1,5 +1,5 @@
 <?php
-class Escalations extends view
+class EscalationsHead extends view
 {
 
 	public function output()

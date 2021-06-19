@@ -15,7 +15,8 @@ class ViewStatementModel extends model
 			return $record;
 		}
 	}
-	public function GetType($id){
+	public function GetType($id)
+	{
         $sql='SELECT * from case_types where case_type_id ='.$id.' ';
         $fetch =  $this->dbh->query($sql);
         $record= $this->dbh->single();

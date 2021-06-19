@@ -1,5 +1,5 @@
 <?php
-class CaseView extends view
+class CaseViewHead extends view
 {
 
 	public function output()
@@ -8,7 +8,9 @@ class CaseView extends view
 		$action = "";//= URLROOT . 'public/users/login';
 
 		require APPROOT.'/views/inc/navHead.php';
-
+		$case= $this->model->CaseView();
+		$owner= $this->model->GetOwner();
+		$type= $this->model->GetType();
 		$text = <<<EOT
 
   <body>
@@ -24,12 +26,11 @@ class CaseView extends view
 					<label><b>Description</b></label>
 				</div>
 				<div class="table_col">
-					<label>SAP application not working</label>
-					<label>Abduallah Elmaraghy</label>
-					<label>IT450-630</label>
-					<label>High</label>
-					<label>Medium</label>
-					<label></label>
+					<label>'.$case->subject.'</label>
+					<label>'.$owner->username.'</label>
+					<label>'.$case->priority.'</label>
+					<label>'.$case->severity.'</label>
+					<label>'.$case->description	.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>Category</b></label>
@@ -38,10 +39,10 @@ class CaseView extends view
 					<label><b>Due date</b></label>
 				</div>
 				<div class="table_col">
-					<label>Desktop application</label>
+					<label>'.$type->case_type.'</label>
 					<label>None</label>
-					<label>Opened</label>
-					<label>20/5/2021</label>
+					<label>'.$case->status.'</label>
+					<label>'.$case->due_date.'</label>
 				</div>
 			</div>
 			<h2>User information</h2>
@@ -51,25 +52,25 @@ class CaseView extends view
 					<label><b>Contact phone</b></label>
 				</div>
 				<div class="table_col">
-					<label>Abduallah Elmaraghy</label>
-					<label>01231234349</label>
+					<label>'.$owner->username.'</label>
+					<label>'.$owner->mobile.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>Contact mail</b></label>
 				</div>
 				<div class="table_col">
-					<label >Abdu2020@gmail.com</label>
+					<label >'.$owner->mail.'</label>
 				</div>
 			</div>
 			<h3>Case history</h3>
 			<div class="table_row">
 				<div class="table_col">
 					<label><b>Date & Time</b></label>
-					<label>14/5/2021</label>
+					<label>'.$case->creation_date.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>User</b></label>
-					<label>Abduallah Elmaraghy</label>
+					<label>'.$owner->username.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>Action</b></label>

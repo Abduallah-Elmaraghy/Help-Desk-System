@@ -1,5 +1,5 @@
 <?php
-class GiveWarning extends view
+class GiveWarningHead extends view
 {
 
 	public function output()

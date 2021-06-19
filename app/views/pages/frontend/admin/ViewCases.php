@@ -35,14 +35,14 @@ class ViewCases extends view
     <input type="date" class="filter" value="date modified">
 </div>
 <div class="row">';
-    foreach( $this->model->GetCases() as $case){
-    $case_number = $case->case_number;
-    $severity = $case->severity;
-    $priority = $case->priority;
-    $due_date = $case->due_date;
-    $status = $case->status;
+		foreach( $this->model->GetCases() as $case){
+			$case_number = $case->case_number;
+			$severity = $case->severity;
+			$priority = $case->priority;
+			$due_date = $case->due_date;
+			$status = $case->status;
 
-    $text.='
+			$text.='
     <form method="post"action='.URLROOT.'public/admins/CaseView?id='. $case_number.'>
     <div class="column">
         <div class="card">
@@ -56,12 +56,12 @@ class ViewCases extends view
     </div>
 </form>
 ';
-}
-$text.='</div>
+		}
+		$text.='</div>
 </body>
 
 </html>';
-echo $text;
-}
+		echo $text;
+	}
 
 }

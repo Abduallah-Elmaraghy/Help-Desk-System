@@ -7,8 +7,8 @@ class ViewStatement extends view
 	{
 		require APPROOT.'/views/inc/navAdmin.php';
 
-$statement=$this->model->StatementView();
-$type=$this->model->GetType($statement->Type_id);
+		$statement=$this->model->StatementView();
+		$type=$this->model->GetType($statement->Type_id);
 		$text = '
 
 <body>
