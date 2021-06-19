@@ -35,4 +35,16 @@ class Admins extends Controller
         $indexView = new ViewCases($this->getModel(), $this);
         $indexView->output();
     }    
+    public function UploadStatement(){
+        $viewPath = VIEWS_PATH_ADMIN . 'UploadStatement.php';
+        require_once $viewPath;
+        $indexView = new UploadStatement($this->getModel(), $this);
+        $indexView->output();
+    }
+    public function ViewStatement(){
+        $viewPath = VIEWS_PATH_ADMIN . 'ViewStatement.php';
+        require_once $viewPath;
+        $indexView = new ViewStatement($this->getModel(), $this);
+        $indexView->output();
+    }
 }

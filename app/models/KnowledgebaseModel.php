@@ -5,7 +5,8 @@ class KnowledgeBaseModel extends model
 	public function GetStatements()
 	{
 		$sql = 'SELECT * FROM knowledge_base';
-		//var_dump ( $record);
+		$fetch =  $this->dbh->query($sql);
+		$record= $this->dbh->resultSet();
 		return $record;
 	}
 	public function ViewStatement()
