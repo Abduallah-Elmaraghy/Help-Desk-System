@@ -85,23 +85,24 @@
 		<nav>			
 			<div class="logo">
 				<img src="../images/logo.png" style="width:50px; hieght:40px;">
+
 				<h1>Rashpetco</h1>
 			</div>
 			<ul class="nav_menu" id="sidenav">
 				<li>
-					<a href="../user/Homepage.php">Home</a>
+					<a href='<?php echo URLROOT . 'public/pages/HomePage'?>'>Home</a>
 				</li>
 				<li>
-					<a href="../user/KnowledgeBase.php">Knowledge base</a>
+					<a href='<?php echo URLROOT . 'public/pages/KnowledgeBase'?>'>Knowledge base</a>
 				</li>
 				<li>
-					<a href="../user/ViewCases.php">View Cases</a>
+					<a href='<?php echo URLROOT . 'public/pages/ViewCases'?>'>View Cases</a>
 				</li>
 				<li>
-					<a href="../user/EscalateCase.php">Escalate a case</a>	
+					<a href='<?php echo URLROOT . 'public/pages/EscalateCase'?>'>Escalate a case</a>	
 				</li>
 				<li>
-					<a href="../user/NewCase.php">New case</a>	
+					<a href='<?php echo URLROOT . 'public/pages/NewCase'?>'>New case</a>	
 				</li>
 			</ul>
 		</nav>	

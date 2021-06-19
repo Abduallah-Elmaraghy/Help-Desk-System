@@ -9,11 +9,12 @@ class ViewCases extends view
    
   require APPROOT.'/views/inc/navUser.php';
    
-      $text = <<<EOT
+      $text = '
  
 	<body>
 		<?php include "../../includes/navUSer.php";?>
 		<h2 style="margin-left: 100px;">Filters</h2>
+		<form method="post" action='.URLROOT.'public/pages/CaseView>
 		<div class="Filters">
 			<select class="filter">
 				<option>Type of problem</option>
@@ -33,7 +34,7 @@ class ViewCases extends view
 		<div class="row">
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -43,7 +44,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -53,7 +54,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -63,7 +64,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -73,7 +74,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -83,7 +84,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -93,7 +94,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -103,7 +104,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -113,7 +114,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -123,7 +124,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -133,7 +134,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -143,7 +144,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -153,7 +154,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -163,7 +164,7 @@ class ViewCases extends view
 			</div>
 			<div class="column">
 				<div class="card">
-					<img src="../../images/recent%20cases.png">
+					<img src="../images/recent%20cases.png">
 					<div class="card_body">
 						<h4>Case number :</h4>
 						<h4>Status :</h4>
@@ -173,7 +174,7 @@ class ViewCases extends view
 			</div>
 		</div>
 	</body>
-EOT;
+';
     echo $text;
  
   }

@@ -1,7 +1,7 @@
 
 
 <?php
-class Caseview_user extends view
+class Caseview extends view
 {
 
   public function output()

@@ -1,6 +1,6 @@
 
 <?php
-class HomepageUser extends view
+class HomePageUser extends view
 {
 
   public function output()
@@ -8,13 +8,14 @@ class HomepageUser extends view
    
   require APPROOT.'/views/inc/navUser.php';
    
-      $text = <<<EOT
+      $text = '
  
  <body>
 		<?php
 		include "../../includes/navUser.php";;
 		?>
 		<h2 style="margin-left: 100px;">Opened Cases</h2>
+		<form method="post" action='.URLROOT.'public/pages/CaseView>
 		<div class="pending_cases">
 			<div class="triangle-left"></div>
 			<div class="card">
@@ -43,6 +44,7 @@ class HomepageUser extends view
 			</div>
 			<div class="triangle-right"></div>
 		</div>
+		</form>
 		<div class="viewcases">
 			<h2>Cases  Quick  Access</h2>
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cases..">
@@ -55,51 +57,38 @@ class HomepageUser extends view
 					<th></th>
 				</tr>
 				<tr>
-					<td>Alfreds Futterkiste</td>
-					<td>Maria Anders</td>
-					<td>Germany</td>
-					<td>Germany</td>
-					<td><a href="">Open</a></td>
+					<td>EO31</td>
+					<td>Medium</td>
+					<td>5</td>
+					<td>20/10/2021</td>
+					<td><a href='.URLROOT.'public/pages/CaseView>Open</a></td>
 				</tr>
 				<tr>
-					<td>Berglunds snabbköp</td>
-					<td>Christina Berglund</td>
-					<td>Sweden</td>
-					<td>Sweden</td>
-					<td><a href="#">Open</a></td>
+					<td>EO32</td>
+					<td>High</td>
+					<td>8</td>
+					<td>3/8/2021</td>
+					<td><a href="'.URLROOT.'public/pages/CaseView">Open</a></td>
 				</tr>
 				<tr>
-					<td>Ernst Handel</td>
-					<td>Roland Mendel</td>
-					<td>Austria</td>
-					<td>Austria</td>
-					<td><a href="#">Open</a></td>
+					<td>EO33</td>
+					<td>Low</td>
+					<td>6</td>
+					<td>5/6/2021</td>
+					<td><a href="'.URLROOT.'public/pages/CaseView">Open</a></td>
 				</tr>
 				<tr>
-					<td>Island Trading</td>
-					<td>Helen Bennett</td>
-					<td>UK</td>
-					<td>UK</td>
-					<td><a href="#">Open</a></td>
+					<td>EO34</td>
+					<td>High</td>
+					<td>8</td>
+					<td>8/8/2021</td>
+					<td><a href="'.URLROOT.'public/pages/CaseView">Open</a></td>
 				</tr>
-				<tr>
-					<td>Königlich Essen</td>
-					<td>Philip Cramer</td>
-					<td>Germany</td>
-					<td>Germany</td>
-					<td><a href="#">Open</a></td>
-				</tr>
-				<tr>
-					<td>Paris spécialités</td>
-					<td>Marie Bertrand</td>
-					<td>France</td>
-					<td>France</td>
-					<td><a href="#">Open</a></td>
-				</tr>
+				
 			</table>
 		</div>
 	</body>
-EOT;
+';
     echo $text;
  
   }

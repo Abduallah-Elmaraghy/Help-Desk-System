@@ -8,7 +8,7 @@ class ViewStatement extends view
    
   require APPROOT.'/views/inc/navUser.php';
    
-      $text = <<<EOT
+      $text = '
  
 <body>
 		<?php
@@ -49,7 +49,7 @@ class ViewStatement extends view
 			</div>
 		</form> 
 	</body>
-EOT;
+';
     echo $text;
  
   }
