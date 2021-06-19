@@ -20,7 +20,7 @@ class CaseView extends view
 		<?php
 		include "../../includes/navAdmin.php";
 ?>
-		<form method="post" class="view_card">
+		<form method="post" class="view_card" enctype="multipart/form-data">
 			<h1>New Statement</h1>
 			<div class="table_row">
 				<div class="table_col">
@@ -55,7 +55,7 @@ class CaseView extends view
 					</div>
 					<div class="table_row">
 						<div class="addAttachment">
-							<input type="file" id="file" accept="image/*">
+							<input type="file" name="myfile" id="file" >
 							<label for="file" class="attachment_label">
 								Add attachment
 							</label>
