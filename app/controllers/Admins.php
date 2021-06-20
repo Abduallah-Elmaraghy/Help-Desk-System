@@ -40,11 +40,16 @@ class Admins extends Controller
         require_once $viewPath;
         $indexView = new UploadStatement($this->getModel(), $this);
         $indexView->output();
+        $this->model->UploadStatement();
+        
     }
     public function ViewStatement(){
+        
         $viewPath = VIEWS_PATH_ADMIN . 'ViewStatement.php';
         require_once $viewPath;
         $indexView = new ViewStatement($this->getModel(), $this);
         $indexView->output();
+        
     }
+
 }

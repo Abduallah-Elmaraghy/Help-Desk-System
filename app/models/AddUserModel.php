@@ -6,8 +6,8 @@ class AddUserModel extends UserModel
 
     public function AddUser()
     {
-        $this->dbh->query("INSERT INTO `user`( `username`, `mail`, `password`, `mobile`, `department_id`, `type_id`, `position_id`, `profile_picture_path`) 
-        VALUES (:uname, :email, :pass,:mobile,:department,:type,:position,:pp)");
+        $this->dbh->query("INSERT INTO `user`( `username`, `mail`, `password`, `mobile`, `department_id`, `type_id`, `position_id`,
+         `profile_picture_path`) VALUES (:uname, :email, :pass,:mobile,:department,:type,:position,:pp)");
         $this->dbh->bind(':uname', $this->username);
         $this->dbh->bind(':email', $this->email);
         $this->dbh->bind(':pass', $this->password);

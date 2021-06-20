@@ -100,9 +100,7 @@
 				<li>
 					<a href='<?php echo URLROOT . 'public/admins/ViewCases'?>'>View Cases</a>
 				</li>
-				<li>
-					<a href=''>Statistics</a>
-				</li>
+				
 				<li>
 					<a href='<?php echo URLROOT . 'public/admins/UploadStatement'?>'>Upload Statement</a>
 				</li>

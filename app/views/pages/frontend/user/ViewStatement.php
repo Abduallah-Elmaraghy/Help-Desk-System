@@ -3,17 +3,18 @@
 class ViewStatement extends view
 {
 
-  public function output()
-  {
-   
-  require APPROOT.'/views/inc/navUser.php';
-   
-      $text = '
- 
+	public function output()
+	{
+		require APPROOT.'/views/inc/navuser.php';
+
+		$statement=$this->model->StatementView();
+		$type=$this->model->GetType($statement->Type_id);
+		$text = '
+
 <body>
 		<?php
 		include "../../includes/navUser.php";
-		?>
+?>
 		<form method="post" class="view_card">
 			<h1>Statement Details</h1>
 			<div class="table_row">
@@ -24,10 +25,10 @@ class ViewStatement extends view
 					<label>Description</label>	
 				</div>
 				<div class="table_col">
-					<label>Subject</label>
-					<label>Type of problem</label>
-					<label>Problem definition</label>
-					<label>Description</label>	
+					<label>'.$statement->subject.'</label>
+					<label>'.$type->case_type.'</label>
+					<label>'.$statement->problem_definition.'</label>
+					<label>'.$statement->description.'</label>
 				</div>
 				<div class="files_info_view">
 					<div class="table_row">
@@ -50,7 +51,7 @@ class ViewStatement extends view
 		</form> 
 	</body>
 ';
-    echo $text;
- 
-  }
+		echo $text;
+
+	}
 }

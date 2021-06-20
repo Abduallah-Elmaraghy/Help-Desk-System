@@ -48,4 +48,13 @@ class HomePageModel extends CaseModel
 		//var_dump ( $record);
 		return $record;
 	}
+	public function GetUserCases()
+	{
+		$sql = 'SELECT *from company_cases WHERE status = "Opening" ';
+		$fetch =  $this->dbh->query($sql);
+		$record= $this->dbh->resultSet();
+		//var_dump ( $record);
+		return $record;
+	}
+	
 }

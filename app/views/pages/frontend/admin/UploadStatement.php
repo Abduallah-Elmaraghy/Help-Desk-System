@@ -80,7 +80,6 @@ class UploadStatement extends view
 	</body>
 </html>
   ';
-  $this->model->UploadStatement();
 		echo $text;
 	}
 

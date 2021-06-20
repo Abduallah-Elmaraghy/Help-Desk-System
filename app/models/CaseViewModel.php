@@ -20,7 +20,7 @@ class CaseViewModel extends CaseModel
 			//$this->dbh->bind(':id', $id);  
 			$fetch =  $this->dbh->query($sql);
 			$record = $this->dbh->single(); 
-			var_dump($record->case_number);
+		//	var_dump($record->case_number);
 			return $record;
 		}
 	}

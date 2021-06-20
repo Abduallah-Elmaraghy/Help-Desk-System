@@ -4,6 +4,7 @@ class Heads extends Controller
 
 	public function HomePage()
 	{
+		
 		$viewPath = VIEWS_PATH_HEAD . 'HomePage.php';
 		require_once $viewPath;
 		$indexView = new HomePageHead($this->getModel(), $this);

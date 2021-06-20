@@ -21,7 +21,7 @@ $text = <<<EOT
 	include "../../includes/navAdmin.php";
 	?>
 	<form method="post" class="view_card"action='$action'>
-		<h1>Add User</h1>
+		<h1>Add Employee</h1>
 		<div class="table_row">
 			<div class="table_col">
 				<label>Username</label>
@@ -30,9 +30,9 @@ $text = <<<EOT
 				<label>Gender</label>
 			</div>
 			<div class="table_col">
-				<input type="text"name="username">
-				<input type="text"name="email">
-				<input type="text"name="phone">
+				<input type="text"name="username" required>
+				<input type="text"name="email" required>
+				<input type="text"name="phone" required>
 				<select name="gender">
 					<option>Male</option>
 					<option>Femal</option>
@@ -45,8 +45,8 @@ $text = <<<EOT
 				<label>Department</label>
 			</div>
 			<div class="table_col">
-				<input type="password"name="password">
-				<input type="password"name="confirm_password">
+				<input type="password"name="password"required>
+				<input type="password"name="confirm_password"required>
 				<select name="Role">
 					<option value='1'>General Manager</option>
 					<option value='2'>CEO</option>

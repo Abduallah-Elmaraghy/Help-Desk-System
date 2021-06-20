@@ -14,18 +14,20 @@ class UserModel extends model
     protected $passwordErr;
     protected $confirm_passwordErr;
     protected $pp;
+    protected $mobileErr;
 
     public function __construct()
     {
         parent::__construct();
         $this->email    = '';
         $this->password = '';
+        $this->mobileErr = '';
         $this->username = '';        
         $this->confirm_password = '';       
         $this->mobile = '';     
         $this->department = '';       
         $this->position = '';       
-        $this->type = '';       
+        $this->type = '';
         $this->emailErr    = '';
         $this->passwordErr = '';
         $this->confirm_passwordErr = '';
@@ -145,6 +147,15 @@ class UserModel extends model
     {
         $this->confirm_passwordErr = $confirm_passwordErr;
     }
+
+
+    public function setMobileErr($mobileErr){
+        $this->mobileErr=$mobileErr;
+    }
+    public function getMobileErr(){
+        return $this->mobileErr;
+    }
+    
     public function findUserByEmail($email)
     {
         $this->dbh->query('select * from user where mail= :email');
@@ -157,4 +168,17 @@ class UserModel extends model
     {
         return $this->findUserByEmail($email) > 0;
     }
+    public function findUserByUsername($username)
+    {
+        $this->dbh->query('select * from user where username= :username');
+        $this->dbh->bind(':username', $username);
+        $userRecord = $this->dbh->single();
+        return $this->dbh->rowCount();
+    }
+    
+    public function usernameExist($username)
+    {
+        return $this->findUserByUsername($username) > 0;
+    }
+
 }

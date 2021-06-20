@@ -29,7 +29,7 @@ $text = '
         $text.= '
         <form method="post"action='.URLROOT.'public/admins/CaseView?id='. $case_number.'>
         <div class="card">
-            <img src="../../recent%20cases.png">
+            <img src="../images/recent cases.png">
             <div class="card_body">
                 <h4>Case number : '.$case_number.'</h4>
                 <h4>Status : '.$status.'</h4>

@@ -20,6 +20,21 @@ class KnowledgeBaseModel extends model
 			return $record;
 		}
 	}
+	public function GetType($id)
+	{
+		
+		
+
+			$check='SELECT * from company_cases WHERE case_number = '.$id.'';
+			$fetch =  $this->dbh->query($check);
+			$record = $this->dbh->single();
+
+			$sql="SELECT * from case_types WHERE case_type_id = '$record->type_id'";
+			$fetch =  $this->dbh->query($sql);
+			$record = $this->dbh->single(); 
+			return $record;
+		
+	}
 	public function UploadStatement()
 	{
 		if(isset($_POST['submit']))

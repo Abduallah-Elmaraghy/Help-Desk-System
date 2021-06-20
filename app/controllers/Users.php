@@ -12,20 +12,27 @@ class Users extends Controller
 			$registerModel->setPassword(trim($_POST['password']));
 			$registerModel->setConfirmPassword(trim($_POST['confirm_password']));
 			$registerModel->setMobile(trim($_POST['phone']));
-			$registerModel->setDepartment(trim(1));
-			$registerModel->setType(trim(1));
-			$registerModel->setPosition(trim(1));
-			$registerModel->setPP(trim('s'));
-
+			$registerModel->setDepartment(trim($_POST['department']));
+			$registerModel->setType(trim(2));
+			$registerModel->setPosition(trim($_POST['Role']));
+			
 
 			if (empty($registerModel->getUsername()) ) {
 				$registerModel->setNameErr('Please enter a name');
+			}
+
+			if (empty($registerModel->getMobile())) {
+				$registerModel->setMobileErr('Please enter a mobile');
+			}
+			elseif (strlen($registerModel->getMobile()) != 11){
+				$registerModel->setMobileErr('Invalid Mobile number');
 			}
 			if (empty($registerModel->getEmail())) {
 				$registerModel->setEmailErr('Please enter an email');
 			} 
 			elseif ($registerModel->emailExist($_POST['email'])) {
 				$registerModel->setEmailErr('Email is already registered');
+				echo'<script> alert("Already registered Email")</script>';
 			}
 			if (empty($registerModel->getPassword())) {
 				$registerModel->setPasswordErr('Please enter a password');
@@ -42,6 +49,7 @@ class Users extends Controller
 				empty($registerModel->getEmailErr()) &&
 				empty($registerModel->getPasswordErr()) &&
 				empty($registerModel->getConfirmPasswordErr())
+				&&empty($registerModel->getMobileErr())
 			) 
 			{
 
@@ -89,10 +97,10 @@ class Users extends Controller
 			}
 
 
-			if (
+			if(
 				empty($userModel->getEmailErr()) &&
 				empty($userModel->getPasswordErr())
-			) {
+			){
 
 				$loggedUser = $userModel->login();
 				if ($loggedUser) 
