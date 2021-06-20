@@ -7,6 +7,7 @@ class CaseModel extends model
 	protected $caseType;
 	protected $caseType_id;
 	protected $status;
+	protected $subject;
 	protected $priority;
 	protected $severity;
 	protected $description;
@@ -17,6 +18,7 @@ class CaseModel extends model
 	{
 		parent::__construct();
 		$this->CaseNumber = '';
+		$this->subject = '';
 		$this->caseHolder = '';
 		$this->caseType = '';
 		$this->status = '';
@@ -37,7 +39,15 @@ class CaseModel extends model
 	{
 		$this->caseNumber = $caseNumber;
 	}
+	public function getSubject()
+	{
+		return $this->subject;
+	}
 
+	public function setSubject($subject)
+	{
+		$this->subject = $subject;
+	}
 	//$caseHolder
 //	public function getCaseHolder()
 //	{

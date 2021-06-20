@@ -9,11 +9,10 @@ class NewCase extends view
    
   require APPROOT.'/views/inc/navUser.php';
    
-      $text = <<<EOT
+      $text = '
  
  <body>
-		<?php include '../../includes/navUser.php';?>
-		<form method="post" class="view_card">
+		<form method="post" class="view_card" action="'.URLROOT . 'public/admin/NewCase'.'">
 			<h1>New Case</h1>
 			<div class="table_row">
 				<div class="table_col">
@@ -23,14 +22,14 @@ class NewCase extends view
 					<label>Severity</label>
 				</div>
 				<div class="table_col">
-					<input type="text">
+					<input type="text"name="subject">
 					<label>IT450-650</label>
-					<select>
+					<select name="priority">
 						<option>High</option>
 						<option>Extreme</option>
 						<option>Low</option>
 					</select>
-					<select>
+					<select name="severity">
 						<option>High</option>
 						<option>Extreme</option>
 						<option>Low</option>
@@ -42,13 +41,13 @@ class NewCase extends view
 					<label>Due date</label>
 				</div>
 				<div class="table_col">
-					<select>
-						<option>Network</option>
-						<option>System fail</option>
-						<option>Database</option>
+					<select name="type">
+						<option value="1">Network</option>
+						<option value="2">System fail</option>
+						<option value="3">Database</option>
 					</select>
 					<label>IT450-650</label>
-					<input type="date" min="">
+					<input type="date"name="date" min="">
 				</div>
 			</div>
 			<div class="table_row">
@@ -58,7 +57,7 @@ class NewCase extends view
 					</label>
 				</div>
 				<div class="table_col">
-					<textarea type="text"></textarea>
+					<textarea type="text"name="description"></textarea>
 				</div>
 			</div>
 			<div class="table_row">
@@ -70,11 +69,11 @@ class NewCase extends view
 				</div>			
 			</div>
 			<div class="submit">
-				<input type="submit">
+				<input type="submit" name="submit">
 			</div>
 		</form> 
 	</body>
-EOT;
+';
     echo $text;
  
   }

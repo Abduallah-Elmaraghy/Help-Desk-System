@@ -15,7 +15,6 @@ class Users extends Controller
 			$registerModel->setDepartment(trim($_POST['department']));
 			$registerModel->setType(trim(2));
 			$registerModel->setPosition(trim($_POST['Role']));
-			
 
 			if (empty($registerModel->getUsername()) ) {
 				$registerModel->setNameErr('Please enter a name');
