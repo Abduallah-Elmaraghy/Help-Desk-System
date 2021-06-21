@@ -18,10 +18,14 @@ class Users extends Controller
 
 			if (empty($registerModel->getUsername()) ) {
 				$registerModel->setNameErr('Please enter a name');
+				echo'<script> alert("Please Enter A valid password")</script>';
+				
 			}
 
 			if (empty($registerModel->getMobile())) {
 				$registerModel->setMobileErr('Please enter a mobile');
+				echo'<script> alert("Please Enter a phone number")</script>';
+				
 			}
 			elseif (strlen($registerModel->getMobile()) != 11){
 				$registerModel->setMobileErr('Invalid Mobile number');
@@ -35,13 +39,19 @@ class Users extends Controller
 			}
 			if (empty($registerModel->getPassword())) {
 				$registerModel->setPasswordErr('Please enter a password');
+				echo'<script> alert("Please Enter A valid password")</script>';
+				
 			} elseif (strlen($registerModel->getPassword()) < 4) {
 				$registerModel->setPasswordErr('Password must contain at least 4 characters');
+				echo'<script> alert("Please Enter A valid password at least 4 numbers")</script>';
+
 			}
 
 			if ($registerModel->getPassword() != $registerModel->getConfirmPassword()) {
 				$registerModel->setConfirmPasswordErr('Passwords do not match');
-			}
+				echo'<script> alert("Passwords do not match")</script>';
+				
+					}
 
 			if (
 
