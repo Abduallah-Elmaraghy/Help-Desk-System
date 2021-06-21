@@ -6,7 +6,7 @@ class Users extends Controller
 		$registerModel = $this->getModel();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
-
+			
 			$registerModel->setUsername(trim($_POST['username']));
 			$registerModel->setEmail(trim($_POST['email']));
 			$registerModel->setPassword(trim($_POST['password']));
@@ -130,8 +130,12 @@ class Users extends Controller
 						header("location:".URLROOT."public/Heads/HomePage");    
 					}                 
                     
-                }
-                    
+                
+				}
+                else
+				{
+					header("location:".URLROOT."public");    
+				}    
                
                 }
                 
