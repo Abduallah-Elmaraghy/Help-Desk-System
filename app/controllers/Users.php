@@ -29,6 +29,8 @@ class Users extends Controller
 			}
 			elseif (strlen($registerModel->getMobile()) != 11){
 				$registerModel->setMobileErr('Invalid Mobile number');
+				echo'<script> alert("Please Enter A valid phone number")</script>';
+
 			}
 			if (empty($registerModel->getEmail())) {
 				$registerModel->setEmailErr('Please enter an email');
