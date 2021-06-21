@@ -114,7 +114,8 @@ class Users extends Controller
 			){
 
 				$loggedUser = $userModel->login();
-				if ($loggedUser) 
+                
+				if ($loggedUser != false) 
 				{
 					if($userModel->login()->type_id==1)
 					{
@@ -122,20 +123,34 @@ class Users extends Controller
 					}
 					else if($userModel->login()->type_id==2)
 					{
+						$this->createUserSession($loggedUser);
                         header("location:".URLROOT."public/pages/HomePage");    
 
 					}
 					else if($userModel->login()->type_id==3)
 					{
-						header("location:".URLROOT."public/Heads/HomePage");    
+						  
+                       header("location:".URLROOT."public/Heads/HomePage");    
 					}                 
+					
                     
+<<<<<<< Updated upstream
                 
 				}
                 else
 				{
 					header("location:".URLROOT."public");    
 				}    
+=======
+                  
+                }
+				else
+				{
+					header("location:".URLROOT."public/Pages/Login" );
+				}
+              
+                    
+>>>>>>> Stashed changes
                
                 }
                 
@@ -147,10 +162,11 @@ class Users extends Controller
 
 	public function createUserSession($user)
 	{
-		$_SESSION['user_id'] = $user->id;
-		$_SESSION['user_name'] = $user->name;
+        
+	
+		$_SESSION['user_id'] = $user->user_id;
+        $_SESSION['user_name'] = $user->username;
 
-		redirect('pages');
 	}
 
 	public function logout()
