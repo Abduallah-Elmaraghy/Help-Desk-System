@@ -50,7 +50,11 @@ class HomePageModel extends CaseModel
 	}
 	public function GetUserCases()
 	{
-		$sql = 'SELECT *from company_cases WHERE status = "Opening" ';
+		$empid = $_SESSION['user_id'];
+		
+			
+		
+		$sql = 'SELECT *from company_cases WHERE case_holder_id = "'.$empid.'"';
 		$fetch =  $this->dbh->query($sql);
 		$record= $this->dbh->resultSet();
 		//var_dump ( $record);

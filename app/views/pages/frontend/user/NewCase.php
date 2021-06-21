@@ -21,7 +21,7 @@ class NewCase extends view
 				</div>
 				<div class="table_col">
 					<input type="text"name="subject">
-					<label>IT450-650</label>
+					<label>       </label>
 					<select name="priority">
 						<option>High</option>
 						<option>Extreme</option>
@@ -35,7 +35,6 @@ class NewCase extends view
 				</div>
 				<div class="table_col">
 					<label>Category</label>
-					<label>Parent case</label>
 					<label>Due date</label>
 				</div>
 				<div class="table_col">
@@ -44,7 +43,6 @@ class NewCase extends view
 						<option value="2">System fail</option>
 						<option value="3">Database</option>
 					</select>
-					<label>IT450-650</label>
 					<input type="date"name="date" min="">
 				</div>
 			</div>

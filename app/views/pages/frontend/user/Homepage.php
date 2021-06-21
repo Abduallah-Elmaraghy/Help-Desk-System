@@ -54,7 +54,7 @@ $text.='</div>
             <th></th>
         </tr>';
 
-        foreach( $this->model->GetCases() as $case){
+        foreach( $this->model->GetUserCases() as $case){
         $case_number = $case->case_number;
         $severity = $case->severity;
         $priority = $case->priority;

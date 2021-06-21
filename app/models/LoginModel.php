@@ -17,7 +17,8 @@ class LoginModel extends UserModel
 		if ($this->password == $_POST['pass']) {
 			return $record;
 		} else {
-			return false;
+           
+			echo "incorreect";
 		}
 
 	}

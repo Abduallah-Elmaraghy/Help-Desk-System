@@ -12,7 +12,14 @@ class ViewCasesModel extends CaseModel
 		//var_dump ( $record);
 		return $record;
 	}
-
+	public function GetCasesuser($id)
+	{
+		$sql = 'SELECT *from company_cases where case_holder_id  ="'.$id.'" ';
+		$fetch =  $this->dbh->query($sql);
+		$record= $this->dbh->resultSet();
+		//var_dump ( $record);
+		return $record;
+	}
 	public function GetPendingCases()
 	{
 		$sql = 'SELECT *from company_cases WHERE status = "Pending" ';
