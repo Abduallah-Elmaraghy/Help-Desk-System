@@ -112,49 +112,31 @@ class NewCase extends view
 echo $text;
 
 
-$dbh= new PDO("mysql:host=localhost;mydata","root","");
-if(isset($_POST["btn"]))
-{
-	$name=$_FILES['myfile']['name'];
-	$type=$_FILES['myfile']['type'];
-	$data=file_get_contents($_FILES['myfile']['tmp_name']);
-	$stmt=$dbh->prepare("insert into case_attachments('',?,?,?,?)");
-	$stmt->bindParem(1,$caseNumber);
-	$stmt->bindParem(2,$data);
-	$stmt->bindParem(3,$name);
-	$stmt->bindParem(4,"");
-	$stmt->bindParem(5,$type);
-	$stmt->execute();
+
+
+// if(isset($_POST["submitNewCase"]))
+// {
+
+// $this->model->setCase_number($caseNumber);
+// $this->model->setCase_holder_id("1");//ToDo change 1 to current user id
+// $this->model->setType_id($_POST["type"]);
+// $this->model->setSubject($_POST["subject"]);
+// $this->model->setStatus("pending");
+// $this->model->setPriority($_POST["casePriority"]);
+// $this->model->setSeverity($_POST["severity"]);
+// $this->model->setDescription($_POST["description"]);
+// $this->model->setDue_date($_POST["dueDate"]);
+// $this->model->set_creationDate($t);
+// $this->model->set_parent_case("parent_case");
 
 
 
-	
-}
+// echo '<script type="text/javascript">
+// alert("Case Added Successfully!\nYour Case Number is: '.$caseNumber.'");
+// </script>';
 
 
-if(isset($_POST["submitNewCase"]))
-{
-
-$this->model->setCase_number($caseNumber);
-$this->model->setCase_holder_id("1");//ToDo change 1 to current user id
-$this->model->setType_id($_POST["type"]);
-$this->model->setSubject($_POST["subject"]);
-$this->model->setStatus("pending");
-$this->model->setPriority($_POST["casePriority"]);
-$this->model->setSeverity($_POST["severity"]);
-$this->model->setDescription($_POST["description"]);
-$this->model->setDue_date($_POST["dueDate"]);
-$this->model->set_creationDate($t);
-$this->model->set_parent_case("parent_case");
-
-$this->model->addCase();
-
-echo '<script type="text/javascript">
-alert("Case Added Successfully!\nYour Case Number is: '.$caseNumber.'");
-</script>';
-
-
-}
+// }
 
 
 }

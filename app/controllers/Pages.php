@@ -102,6 +102,7 @@ class Pages extends Controller
 		require_once $viewPath;
 		$indexView = new NewCase($this->getModel(), $this);
 		$indexView->output();
+        $this->model->addCase();
 	}
     public function EscalateCase()
 	{
