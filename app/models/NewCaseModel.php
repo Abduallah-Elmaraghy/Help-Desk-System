@@ -1,3 +1,5 @@
+
+
 <?php
 require_once 'CaseModel.php';
 class NewCaseModel extends CaseModel
@@ -31,6 +33,7 @@ class NewCaseModel extends CaseModel
         $this->parent_case= '';
     
 	}
+
 
     public function getCase_number(){
 		return $this->case_number;
@@ -85,6 +88,7 @@ class NewCaseModel extends CaseModel
     public function getPriority(){
 		return $this->priority;
 	}
+
 
 	public function setPriority($priority){
 		$this->priority = $priority;
@@ -147,7 +151,7 @@ class NewCaseModel extends CaseModel
     {
         $this->dbh->query("INSERT INTO `company_cases`( `case_number`, `case_holder_id`, `type_id`, `subject`, `status`, `priority`, `severity`, `description`, `due_date`, `creation_date`) 
         VALUES (:case_number, :case_holder_id, :type_id, :subject, :status, :priority, :severity, :description, :due_date , :creation_date);
-        INSERT INTO `parent_case`(`case_number`, `parent_number`)  VALUES(:case_number, :parent_number);
+
         ");
 
         $this->dbh->bind(':case_number', $this->case_number);
@@ -161,9 +165,11 @@ class NewCaseModel extends CaseModel
         $this->dbh->bind(':due_date', $this->due_date);
         $this->dbh->bind(':creation_date', $this->creation_date);
         $this->dbh->bind(':parent_number', $this->parent_case);
+
 		return $this->dbh->execute();
 
 
 
-}
+
+	}
 }

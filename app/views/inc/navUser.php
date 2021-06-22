@@ -104,6 +104,9 @@
 				<li>
 					<a href='<?php echo URLROOT . 'public/pages/NewCase'?>'>New case</a>	
 				</li>
+				<li>
+					<a href='<?php echo URLROOT . 'public/users/logout'?>'>Logout</a>
+				</li>
 			</ul>
 		</nav>	
 	</body>

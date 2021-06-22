@@ -3,11 +3,8 @@ class ViewCasesHead extends view
 {
 	public function output()
 	{
-
 		$action = "";//= URLROOT . 'public/users/login';
-
 		require APPROOT.'/views/inc/navHead.php';
-
 		$text = '
   <body>
 		<h2 style="margin-left: 100px;">Filters</h2>
@@ -59,6 +56,7 @@ class ViewCasesHead extends view
 		{
 			return;
 		}
+		
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp=new XMLHttpRequest();
@@ -67,6 +65,7 @@ class ViewCasesHead extends view
 		{// code for IE6, IE5
 			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
+		
 		xmlhttp.onreadystatechange=function()
 		{
 			if (this.readyState==4 && this.status==200)
