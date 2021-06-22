@@ -30,9 +30,9 @@ $text = <<<EOT
 				<label>Gender</label>
 			</div>
 			<div class="table_col">
-				<input type="text"name="username" required>
-				<input type="email"name="email" required>
-				<input type="text"name="phone" required>
+				<input type="text" name="username" required>
+				<input type="email" name="email" required>
+				<input type="text" name="phone" required>
 				<select name="gender">
 					<option>Male</option>
 					<option>Femal</option>
