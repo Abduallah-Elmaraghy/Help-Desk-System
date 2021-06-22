@@ -22,18 +22,16 @@ class KnowledgeBaseModel extends model
 	}
 	public function GetType($id)
 	{
-		
-		
 
-			$check='SELECT * from company_cases WHERE case_number = '.$id.'';
-			$fetch =  $this->dbh->query($check);
-			$record = $this->dbh->single();
+		$check='SELECT * from knowledge_base WHERE Type_id = '.$id.'';
+		$fetch =  $this->dbh->query($check);
+		$record = $this->dbh->single();
 
-			$sql="SELECT * from case_types WHERE case_type_id = '$record->type_id'";
-			$fetch =  $this->dbh->query($sql);
-			$record = $this->dbh->single(); 
-			return $record;
-		
+		$sql="SELECT * from case_types WHERE case_type_id = '$record->Type_id'";
+		$fetch =  $this->dbh->query($sql);
+		$record = $this->dbh->single(); 
+		return $record;
+
 	}
 	public function UploadStatement()
 	{
