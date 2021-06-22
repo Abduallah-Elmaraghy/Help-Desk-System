@@ -15,16 +15,13 @@ class GiveWarningModel extends WarningModel
 			return $record;
 		}
 	}
-	
-	public function WarnAdmin()
+
+	public function GiveWarning()
 	{
-		$this->dbh->query("INSERT INTO `user_warnings`(`admin_id `, `warning_message`) VALUES
-         (:id, :message)");
-
-		$this->dbh->bind(':id', $this->caseNumber);
-		$this->dbh->bind(':message', $this->caseHolder_id);
-
-		return $this->dbh->execute();
+		$this->dbh->query("INSERT INTO user_warnings (`admin_id`,`warning_message`) VALUES (:id, :message)");
+		$this->dbh->bind(':id', $this->getAdmin_id());
+		$this->dbh->bind(':message', $this->getWarning_message());
+		echo $this->dbh->execute();
 	}
 }
 ?>

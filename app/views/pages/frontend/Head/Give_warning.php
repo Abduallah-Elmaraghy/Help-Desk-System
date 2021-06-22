@@ -6,10 +6,10 @@ class GiveWarningHead extends view
 		$action = "";//= URLROOT . 'public/users/login';
 		require APPROOT.'/views/inc/navHead.php';
 		$admin=$this->model->GetAdmin();
-		$user_id = $admin->user_id;
+//		action="HomePage" enctype="multipart/form-data"
 		$text = <<<EOT
   <body>
-		<form method="post" class="view_card" action="HomePage" enctype="multipart/form-data">
+		<form method="post" class="view_card" >
 			<h1>Give Warning</h1>
 			<div class="table_row">
 				<div class="table_col">

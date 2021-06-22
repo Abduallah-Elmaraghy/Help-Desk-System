@@ -26,32 +26,23 @@ class Heads extends Controller
 		if (isset($_POST['submit']))
 		{
 			$message = $_POST['description'];
-			$InsertModel->setAdmin_id(trim($user_id));
+			$admin_id = $InsertModel->GetAdmin()->user_id;
+			$InsertModel->setAdmin_id(trim($admin_id));
 			$InsertModel->setWarning_message(trim($message));
 
 			if (empty($InsertModel->getAdmin_id()) ) 
 			{
-				$InsertModel->setAdmin_id('Please enter a name');
+				echo "admin id is empty";
 			}
 
 			if (empty($InsertModel->getWarning_message()) ) 
 			{
-				$InsertModel->setWarning_message('Please enter a name');
+				echo "no message is written";
 			}
-
-			if ($InsertModel->GiveWarning()) 
-			{
-
-				flash('register_success', 'You have registered successfully');
-
-				header("location:".URLROOT."public/admins/HomePage");    
-			}
-			else
-			{
-				die('Error in sign up');
-			}
+			$InsertModel->GiveWarning();
+			header("location:".URLROOT."public/Heads/HomePage");    
 		}
-		
+
 		$viewPath = VIEWS_PATH_HEAD . 'Give_warning.php';
 		require_once $viewPath;
 		$indexView = new GiveWarningHead($this->getModel(), $this);
