@@ -136,6 +136,7 @@ class Users extends Controller
 					}                 
 					
                     
+
                 
 
 				}
@@ -144,8 +145,14 @@ class Users extends Controller
 					header("location:".URLROOT."public");    
 				}    
 
+
 			}
 		}
+	}
+
+
+	public function AddCase(){
+		
 	}
 
 	public function createUserSession($user)

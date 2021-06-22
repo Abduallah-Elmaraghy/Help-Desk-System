@@ -34,6 +34,7 @@ class NewCaseModel extends CaseModel
     
 	}
 
+
     public function getCase_number(){
 		return $this->case_number;
 	}
@@ -87,6 +88,7 @@ class NewCaseModel extends CaseModel
     public function getPriority(){
 		return $this->priority;
 	}
+
 
 	public function setPriority($priority){
 		$this->priority = $priority;
@@ -146,23 +148,18 @@ class NewCaseModel extends CaseModel
 
 
     public function addCase()
-    {
-        $this->dbh->query("INSERT INTO `company_cases`( `case_number`, `case_holder_id`, `type_id`, `subject`, `status`, `priority`, `severity`, `description`, `due_date`, `creation_date`) 
-        VALUES (:case_number, :case_holder_id, :type_id, :subject, :status, :priority, :severity, :description, :due_date , :creation_date);
-        ");
+    { 
+		if(isset($_POST["submitNewCase"]))
+		{
+		$casenum = rand(1000,5000);
+		$id=$_SESSION['user_id'];
+		$this->dbh->query("INSERT INTO `company_cases`( `case_number`, `case_holder_id`, `type_id`, `subject`, `status`, `priority`, `severity`, `description`, `due_date`) 
+        VALUES ('$casenum','$id', '$_POST[type]', '$_POST[subject]', 'pending', '$_POST[casePriority]', '$_POST[severity]', '$_POST[description]',' $_POST[dueDate]' )");
 
-        $this->dbh->bind(':case_number', $this->case_number);
-        $this->dbh->bind(':case_holder_id', $this->case_holder_id);
-        $this->dbh->bind(':type_id', $this->type_id);
-        $this->dbh->bind(':subject', $this->subject);
-        $this->dbh->bind(':status', $this->status);
-        $this->dbh->bind(':priority', $this->priority);
-        $this->dbh->bind(':severity', $this->severity);
-        $this->dbh->bind(':description', $this->description);
-        $this->dbh->bind(':due_date', $this->due_date);
-        $this->dbh->bind(':creation_date', $this->creation_date);
-        $this->dbh->bind(':parent_number', $this->parent_case);
+        echo '<script type="text/javascript"> alert("Case Added Successfully!\nYour Case Number is: '.$casenum.'"); </script>';
 
+		return $this->dbh->execute();
+		}
 
 
 

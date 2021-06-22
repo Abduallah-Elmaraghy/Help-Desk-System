@@ -55,36 +55,5 @@ class CaseViewModel extends CaseModel
 			return $record;
 		}
 	}
-	
-	public function GetRecepient()
-	{
-		if(isset($_GET['id']))
-		{
-			$id=$_GET['id'];
-			
-			$check='SELECT * from case_recipient WHERE case_number = '.$id.'';
-			$fetch =  $this->dbh->query($check);
-			$record = $this->dbh->single();
-
-			$sql="SELECT * from `user` WHERE user_id = '$record->case_recipient_id'";
-			$fetch =  $this->dbh->query($sql);
-			$record = $this->dbh->single(); 
-			return $record;
-		}
-	}
-
-	public function GetOpeningDate()
-	{
-		if(isset($_GET['id']))
-		{
-			$id=$_GET['id'];
-			
-			$check='SELECT * from case_recipient WHERE case_number = '.$id.'';
-			$fetch =  $this->dbh->query($check);
-			$record = $this->dbh->single();
-
-			return $record;
-		}
-	}
 
 }

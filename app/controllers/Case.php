@@ -1,7 +1,8 @@
 <?php 
 class admin extends Controller
 {
-    public function NewCase()
+    
+	public function NewCase()
 	{
 		$registerModel = $this->getModel();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -76,5 +77,9 @@ class admin extends Controller
 		$view = new NewCase($this->getModel(), $this);
 		$view->output();
 	}
+
+	
+
+
 }
 ?>
