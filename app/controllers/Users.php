@@ -140,9 +140,8 @@ class Users extends Controller
 				{
 					header("location:".URLROOT."public");    
 				}    
-
                
-                }
+            }
                 
             
 		}
@@ -165,7 +164,7 @@ class Users extends Controller
 		unset($_SESSION['user_id']);
 		unset($_SESSION['user_name']);
 		session_destroy();
-		redirect('Login');
+		header("location:".URLROOT."public");    
 	}
 
 	public function isLoggedIn()
