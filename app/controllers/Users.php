@@ -134,14 +134,8 @@ class Users extends Controller
 					}                 
 					
                     
-<<<<<<< Updated upstream
-                
-				}
                 else
-				{
-					header("location:".URLROOT."public");    
-				}    
-=======
+
                   
                 }
 				else
@@ -150,7 +144,7 @@ class Users extends Controller
 				}
               
                     
->>>>>>> Stashed changes
+
                
                 }
                 
@@ -158,6 +152,11 @@ class Users extends Controller
 		}
 
 
+	}
+
+
+	public function AddCase(){
+		
 	}
 
 	public function createUserSession($user)
