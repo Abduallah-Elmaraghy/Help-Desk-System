@@ -2,31 +2,31 @@
 class HomePageUser extends view
 {
 
-  public function output()
-  {
+	public function output()
+	{
 
-$action = "";//= URLROOT . 'public/users/login';
-require APPROOT.'/views/inc/navUser.php';
-//		<div class="triangle-left"></div>
-//<div class="triangle-right"></div>
-$text = '
- 
+		$action = "";//= URLROOT . 'public/users/login';
+		require APPROOT.'/views/inc/navUser.php';
+		//		<div class="triangle-left"></div>
+		//<div class="triangle-right"></div>
+		$text = '
+
   <body>
 		<?php   
-		?>
+?>
 
 <h2 style="margin-left: 100px;">Opening Cases</h2>
 
 <div class="pending_cases">
     ';
-    foreach( $this->model->GetUserCases() as $case){
-        $case_number = $case->case_number;
-        $severity = $case->severity;
-        $priority = $case->priority;
-        $due_date = $case->due_date;
-        $status = $case->status;
+		foreach( $this->model->GetUserCases() as $case){
+			$case_number = $case->case_number;
+			$severity = $case->severity;
+			$priority = $case->priority;
+			$due_date = $case->due_date;
+			$status = $case->status;
 
-        $text.= '
+			$text.= '
         <form method="post"action='.URLROOT.'public/pages/CaseView?id='. $case_number.'>
         <div class="card">
             <img src="../images/recent cases.png">
@@ -37,8 +37,8 @@ $text = '
             </div>
         </div></form>
     ';
-    }
-$text.='</div>
+		}
+		$text.='</div>
 
 </body>
 <form class="viewcases">
@@ -54,12 +54,12 @@ $text.='</div>
             <th></th>
         </tr>';
 
-        foreach( $this->model->GetUserCases() as $case){
-        $case_number = $case->case_number;
-        $severity = $case->severity;
-        $priority = $case->priority;
-        $due_date = $case->due_date;
-        $text.='
+		foreach( $this->model->GetUserCases() as $case){
+			$case_number = $case->case_number;
+			$severity = $case->severity;
+			$priority = $case->priority;
+			$due_date = $case->due_date;
+			$text.='
 
         <tr>
             <td>' .$case_number.'</td>
@@ -70,11 +70,11 @@ $text.='</div>
             <td><a href='.URLROOT.'public/pages/CaseView?id='. $case_number.'>Open</a></td>
         </tr>
         ';
-        }
-        $text.='
+		}
+		$text.='
     </table>
 </form> ';
-echo $text;
-}
+		echo $text;
+	}
 
 }

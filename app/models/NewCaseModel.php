@@ -154,7 +154,7 @@ class NewCaseModel extends CaseModel
 		$casenum = rand(1000,5000);
 		$id=$_SESSION['user_id'];
 		$this->dbh->query("INSERT INTO `company_cases`( `case_number`, `case_holder_id`, `type_id`, `subject`, `status`, `priority`, `severity`, `description`, `due_date`) 
-        VALUES ('$casenum','$id', '$_POST[type]', '$_POST[subject]', 'pending', '$_POST[casePriority]', '$_POST[severity]', '$_POST[description]',' $_POST[dueDate]' )");
+        VALUES ('$casenum','$id', '$_POST[type]', '$_POST[subject]', 'Pending', '$_POST[casePriority]', '$_POST[severity]', '$_POST[description]',' $_POST[dueDate]' )");
 
         echo '<script type="text/javascript"> alert("Case Added Successfully!\nYour Case Number is: '.$casenum.'"); </script>';
 

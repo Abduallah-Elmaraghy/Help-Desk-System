@@ -64,7 +64,7 @@ class Users extends Controller
 			) 
 			{
 
-				$registerModel->setPassword(password_hash($registerModel->getPassword(), PASSWORD_DEFAULT));
+				$registerModel->setPassword($registerModel->getPassword());
 
 				if ($registerModel->AddUser()) 
 				{
