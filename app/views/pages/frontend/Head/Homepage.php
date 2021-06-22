@@ -19,13 +19,14 @@ class HomePageHead extends view
 			$admin_id = $escalation->admin_id;
 			$reason = $escalation->reason;
 			$description = $escalation->description;
+			$severity = $this->model->GetEscalatedCase($case_number)->severity;
 			$text.= '
-        <form method="post" action='.URLROOT.'public/Heads/ViewEscalations?id='. $case_number.'&&admin_id='.$admin_id.'>
+        <form method="post" action='.URLROOT.'public/Heads/EscalationDetails?id='. $case_number.'&&admin_id='.$admin_id.'>
         	<div class="card">
-            	<img src="../../recent%20cases.png">
+            	<img src="../images/escalations.gif">
             	<div class="card_body">
-                	<h4>Case number : '.$case_number.'</h4>
-                	<h4>Status : '.$status.'</h4>
+					<h4>Case Number :'.$case_number.'</h4>
+					<h4>Severity :'.$severity.'</h4>
                 	<input type="submit" value="Open">
             	</div>
         	</div>
@@ -57,7 +58,7 @@ class HomePageHead extends view
 				<td>' .$severity.'</td>
 				<td>' .$priority.'</td>
             	<td>' .$due_date.'</td>
-				<td><a href='.URLROOT.'public/admins/CaseView?id='. $case_number.'>Open</a></td>
+				<td><a href='.URLROOT.'public/Heads/CaseView?id='. $case_number.'>Open</a></td>
         	</tr>
         	';
 		}

@@ -42,12 +42,21 @@ class HomePageModel extends CaseModel
 
 	public function GetEscalations()
 	{
-		$sql = 'SELECT * FROM escalations';
+		$sql = 'SELECT * FROM escalations WHERE status = "Pending" ';
 		$fetch =  $this->dbh->query($sql);
 		$record= $this->dbh->resultSet();
 		//var_dump ( $record);
 		return $record;
 	}
+
+	public function GetEscalatedCase($id)
+	{
+		$sql="SELECT * from company_cases WHERE case_number = '$id'";
+		$fetch =  $this->dbh->query($sql);
+		$record = $this->dbh->single(); 
+		return $record;
+	}
+
 	public function GetUserCases()
 	{
 		$sql = 'SELECT *from company_cases WHERE status = "Opening" ';
@@ -56,5 +65,5 @@ class HomePageModel extends CaseModel
 		//var_dump ( $record);
 		return $record;
 	}
-	
+
 }

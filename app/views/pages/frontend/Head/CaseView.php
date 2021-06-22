@@ -11,8 +11,8 @@ class CaseViewHead extends view
 		$case= $this->model->CaseView();
 		$owner= $this->model->GetOwner();
 		$type= $this->model->GetType();
-		$text = <<<EOT
 
+		$text = '
   <body>
 		<form method="post" class="view_card">
 			<h1>Case Details</h1>
@@ -30,7 +30,7 @@ class CaseViewHead extends view
 					<label>'.$owner->username.'</label>
 					<label>'.$case->priority.'</label>
 					<label>'.$case->severity.'</label>
-					<label>'.$case->description	.'</label>
+					<label>'.$case->description.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>Category</b></label>
@@ -53,24 +53,31 @@ class CaseViewHead extends view
 				</div>
 				<div class="table_col">
 					<label>'.$owner->username.'</label>
-					<label>'.$owner->mobile.'</label>
+					<label>0'.$owner->mobile.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>Contact mail</b></label>
 				</div>
 				<div class="table_col">
-					<label >'.$owner->mail.'</label>
+					<label >$owner->mail</label>
 				</div>
-			</div>
+			</div>';
+
+		if($case->status!="Pending")
+		{
+			$recepient = $this->model->GetRecepient();
+			$CreationData = $this->model->GetOpeningDate();
+			
+			$text.='
 			<h3>Case history</h3>
 			<div class="table_row">
 				<div class="table_col">
 					<label><b>Date & Time</b></label>
-					<label>'.$case->creation_date.'</label>
+					<label>'.$CreationData->opening_date.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>User</b></label>
-					<label>'.$owner->username.'</label>
+					<label>'.$recepient->username.'</label>
 				</div>
 				<div class="table_col">
 					<label><b>Action</b></label>
@@ -78,8 +85,10 @@ class CaseViewHead extends view
 				</div>
 			</div>
 		</form> 
-	</body>
-EOT;
+	</body>';
+
+		}
+
 		echo $text;
 
 	}

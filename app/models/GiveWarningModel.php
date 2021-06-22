@@ -1,0 +1,30 @@
+<?php
+require_once 'WarningModel.php';
+class GiveWarningModel extends WarningModel
+{
+	public function GetAdmin()
+	{
+		if(isset($_GET['admin_id']))
+		{
+			$id=$_GET['admin_id'];
+
+			$check='SELECT * from user WHERE user_id  = '.$id.'';
+			$fetch =  $this->dbh->query($check);
+			$record = $this->dbh->single();
+
+			return $record;
+		}
+	}
+	
+	public function WarnAdmin()
+	{
+		$this->dbh->query("INSERT INTO `user_warnings`(`admin_id `, `warning_message`) VALUES
+         (:id, :message)");
+
+		$this->dbh->bind(':id', $this->caseNumber);
+		$this->dbh->bind(':message', $this->caseHolder_id);
+
+		return $this->dbh->execute();
+	}
+}
+?>

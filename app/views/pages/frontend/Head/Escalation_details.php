@@ -8,24 +8,28 @@ class EscalationDetails extends view
 		$action = "";//= URLROOT . 'public/users/login';
 
 		require APPROOT.'/views/inc/navHead.php';
-
+		
+		$escalation = $this->model->EscalationView();
+		$admin = $this->model->GetRecepient();
+		$user = $this->model->GetOwner();
+		$id=$_GET['admin_id'];
 		$text = <<<EOT
 
   <body>
-		<form method="post" class="view_card" action="Give_warning.php">
+		<form method="post" class="view_card" action="GiveWarning?admin_id='$id'">
 			<h1>View Escalation</h1><br>
 			<div class="table_row">
 				<div class="table_col">
 					<label>Case number</label>
 				</div>
 				<div class="table_col">
-					<label>IT450-650</label>
+					<label>$escalation->case_number</label>
 				</div>
 				<div class="table_col">
 					<label>Recepient</label>
 				</div>
 				<div class="table_col">
-					<label>Alaa Fadel</label>
+					<label>$admin->username</label>
 				</div>
 			</div>
 			<div class="table_row" style="padding-top:0;">
@@ -34,8 +38,8 @@ class EscalationDetails extends view
 					<label>Description</label>
 				</div>
 				<div class="table_col">
-					<label>asjkdbkasdjcjbnsdkjabkdjsfv</label>
-					<label>cfedwajibsvbqaegbvruybuvs</label>
+					<label>$escalation->reason</label>
+					<label>$escalation->description	</label>
 				</div>
 			</div>
 			<div class="submit">

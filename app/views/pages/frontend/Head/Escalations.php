@@ -1,5 +1,5 @@
 <?php
-class EscalationsHead extends view
+class Escalations extends view
 {
 
 	public function output()
@@ -9,7 +9,7 @@ class EscalationsHead extends view
 
 		require APPROOT.'/views/inc/navHead.php';
 
-		$text = <<<EOT
+		$text = '
 
   <body>
 		<h2 style="margin-left: 100px;">Filters</h2>
@@ -29,144 +29,31 @@ class EscalationsHead extends view
 			<input type="date" class="filter" value="date modified">
 		</div>
 		<div class="row">
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
+		';
+		foreach( $this->model->GetEscalations() as $escalation)
+		{
+			$case_number = $escalation->case_number;
+			$user_id = $escalation->user_id;
+			$admin_id = $escalation->admin_id;
+			$reason = $escalation->reason;
+			$description = $escalation->description;
+			$severity = $this->model->GetEscalatedCase($case_number)->severity;
+			$text .='
+			<form method="post"action='.URLROOT.'public/Heads/EscalationDetails?id='. $case_number.'&&admin_id='.$admin_id.'>
+				<div class="column">
+					<div class="card">
+						<div class="card_body">
+							<h4>Case Number :'.$case_number.'</h4>
+							<h4>Severity :'.$severity.'</h4>
+							<input type="submit" value="View">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card">
-					<div class="card_body">
-						<h4>Type of problem :</h4>
-						<h4>Severity :</h4>
-						<input type="submit" value="View">
-					</div>
-				</div>
-			</div>
+			</form>	';
+		}
+		$text .='
 		</div>
-	</body>
-EOT;
+	</body>';
 		echo $text;
 
 	}

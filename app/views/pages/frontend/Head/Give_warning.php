@@ -1,52 +1,48 @@
 <?php
 class GiveWarningHead extends view
 {
-
 	public function output()
 	{
-
 		$action = "";//= URLROOT . 'public/users/login';
-
 		require APPROOT.'/views/inc/navHead.php';
+		$admin=$this->model->GetAdmin();
+		$user_id = $admin->user_id;
 		$text = <<<EOT
-
   <body>
-		<form method="post" class="view_card">
+		<form method="post" class="view_card" action="HomePage" enctype="multipart/form-data">
 			<h1>Give Warning</h1>
 			<div class="table_row">
 				<div class="table_col">
-
 					<label>intended person</label>
 				</div>
 				<div class="table_col">
-
-					<label>Ahmed mohamed</label>
+					<label>$admin->username</label>
 				</div>
 			</div>
 			<div class="table_row" style="padding-top:0px;">
 				<div class="table_col">
 					<label>
-						Description
+						Message
 					</label>
 				</div>
 				<div class="table_col">
-					<textarea type="text"></textarea>
+					<textarea name="description" type="text" required></textarea>
 				</div>
 			</div>
-			<div class="addAttachment">
-				<input type="file" id="file" accept="image/*">
-				<label for="file" class="attachment_label">
-					Add attachment
-				</label>
-			</div>
-
 			<div class="submit">
-				<input type="submit">
+				<input type="submit" name="submit" value="send" >
 			</div>
 		</form> 
 	</body>
+
 EOT;
 		echo $text;
 
 	}
+//		<div class="addAttachment">
+//				<input type="file" id="file" accept="image/*">
+//				<label for="file" class="attachment_label">
+//					Add File
+//				</label>
+//			</div>
 }
