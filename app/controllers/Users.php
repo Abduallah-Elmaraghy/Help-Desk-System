@@ -134,23 +134,13 @@ class Users extends Controller
 					}                 
 					
                     
-<<<<<<< Updated upstream
                 
 				}
                 else
 				{
 					header("location:".URLROOT."public");    
 				}    
-=======
-                  
-                }
-				else
-				{
-					header("location:".URLROOT."public/Pages/Login" );
-				}
-              
-                    
->>>>>>> Stashed changes
+
                
                 }
                 
