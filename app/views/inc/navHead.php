@@ -100,6 +100,9 @@
 				<li>
 					<a href='<?php echo URLROOT . 'public/heads/GiveWarning'?>'>GiveWarning</a>	
 				</li>
+				<li>
+					<a href='<?php echo URLROOT . 'public/users/logout'?>'>Logout</a>
+				</li>
 			</ul>
 		</nav>	
 	</body>

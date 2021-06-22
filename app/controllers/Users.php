@@ -119,6 +119,7 @@ class Users extends Controller
 				{
 					if($userModel->login()->type_id==1)
 					{
+						$this->createUserSession($loggedUser);
 						header("location:".URLROOT."public/admins/HomePage");    
 					}
 					else if($userModel->login()->type_id==2)
@@ -129,7 +130,7 @@ class Users extends Controller
 					}
 					else if($userModel->login()->type_id==3)
 					{
-						  
+						$this->createUserSession($loggedUser);  
                        header("location:".URLROOT."public/Heads/HomePage");    
 					}                 
 					
