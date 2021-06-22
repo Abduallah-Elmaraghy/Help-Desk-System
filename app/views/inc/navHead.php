@@ -97,9 +97,6 @@
 				<li>
 					<a href='<?php echo URLROOT . 'public/heads/Escalations'?>'>Escalations</a>	
 				</li>
-				<li>
-					<a href='<?php echo URLROOT . 'public/heads/GiveWarning'?>'>GiveWarning</a>	
-				</li>
 			</ul>
 		</nav>	
 	</body>

@@ -6,7 +6,7 @@ class Users extends Controller
 		$registerModel = $this->getModel();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
-			
+
 			$registerModel->setUsername(trim($_POST['username']));
 			$registerModel->setEmail(trim($_POST['email']));
 			$registerModel->setPassword(trim($_POST['password']));
@@ -19,13 +19,13 @@ class Users extends Controller
 			if (empty($registerModel->getUsername()) ) {
 				$registerModel->setNameErr('Please enter a name');
 				echo'<script> alert("Please Enter A valid password")</script>';
-				
+
 			}
 
 			if (empty($registerModel->getMobile())) {
 				$registerModel->setMobileErr('Please enter a mobile');
 				echo'<script> alert("Please Enter a phone number")</script>';
-				
+
 			}
 			elseif (strlen($registerModel->getMobile()) != 11){
 				$registerModel->setMobileErr('Invalid Mobile number');
@@ -42,7 +42,7 @@ class Users extends Controller
 			if (empty($registerModel->getPassword())) {
 				$registerModel->setPasswordErr('Please enter a password');
 				echo'<script> alert("Please Enter A valid password")</script>';
-				
+
 			} elseif (strlen($registerModel->getPassword()) < 4) {
 				$registerModel->setPasswordErr('Password must contain at least 4 characters');
 				echo'<script> alert("Please Enter A valid password at least 4 numbers")</script>';
@@ -52,8 +52,8 @@ class Users extends Controller
 			if ($registerModel->getPassword() != $registerModel->getConfirmPassword()) {
 				$registerModel->setConfirmPasswordErr('Passwords do not match');
 				echo'<script> alert("Passwords do not match")</script>';
-				
-					}
+
+			}
 
 			if (
 
@@ -114,7 +114,7 @@ class Users extends Controller
 			){
 
 				$loggedUser = $userModel->login();
-                
+
 				if ($loggedUser != false) 
 				{
 					if($userModel->login()->type_id==1)
@@ -124,37 +124,29 @@ class Users extends Controller
 					else if($userModel->login()->type_id==2)
 					{
 						$this->createUserSession($loggedUser);
-                        header("location:".URLROOT."public/pages/HomePage");    
+						header("location:".URLROOT."public/pages/HomePage");    
 
 					}
 					else if($userModel->login()->type_id==3)
 					{
-						  
-                       header("location:".URLROOT."public/Heads/HomePage");    
-					}                 
-					
-                    
-                
+						header("location:".URLROOT."public/Heads/HomePage");    
+					}                
 				}
-                else
+				else
 				{
 					header("location:".URLROOT."public");    
 				}    
-               
-            }
-                
-            
+
+			}
 		}
-
-
 	}
 
 	public function createUserSession($user)
 	{
-        
-	
+
+
 		$_SESSION['user_id'] = $user->user_id;
-        $_SESSION['user_name'] = $user->username;
+		$_SESSION['user_name'] = $user->username;
 
 	}
 
