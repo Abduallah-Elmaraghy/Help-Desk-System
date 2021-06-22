@@ -6,6 +6,7 @@ class NewCase extends view
   {
    
   require APPROOT.'/views/inc/navUser.php';
+  $action = URLROOT . 'public/users/AddUser';
    
   $caseNumber ="IT".date("Ymdhms");
   $t=date("Y:m:d:h:m");

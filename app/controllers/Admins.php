@@ -52,4 +52,12 @@ class Admins extends Controller
         
     }
 
+    public function addcase ()
+    {
+         
+
+
+
+    }
+
 }
