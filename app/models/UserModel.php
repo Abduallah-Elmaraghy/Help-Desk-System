@@ -1,6 +1,7 @@
 <?php
 class UserModel extends model
 {
+    protected $id;
     protected $email;
     protected $username;
     protected $password;
@@ -19,6 +20,7 @@ class UserModel extends model
     public function __construct()
     {
         parent::__construct();
+        $this->id = '';
         $this->email    = '';
         $this->password = '';
         $this->mobileErr = '';
@@ -32,7 +34,15 @@ class UserModel extends model
         $this->passwordErr = '';
         $this->confirm_passwordErr = '';
     }
-
+    public function getid()
+    {
+        return $this->email;
+    }
+    
+	public function setid($id)
+    {
+        $this->id = $id;
+    }
     public function getEmail()
     {
         return $this->email;

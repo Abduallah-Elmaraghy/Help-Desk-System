@@ -35,7 +35,7 @@ class ViewCases extends view
     <input type="date" class="filter" value="date modified">
 </div>
 <div class="row">';
-		foreach( $this->model->GetCases() as $case){
+		foreach( $this->model->GetCasesuser($_SESSION['user_id']) as $case){
 			$case_number = $case->case_number;
 			$severity = $case->severity;
 			$priority = $case->priority;
