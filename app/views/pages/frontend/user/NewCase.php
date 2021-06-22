@@ -20,13 +20,11 @@ class NewCase extends view
     <div class="table_row">
         <div class="table_col">
             <label>Subject</label>
-            <label>Case number</label>
             <label>Case Priority</label>
             <label>Severity</label>
         </div>
         <div class="table_col">
             <input type="text" name="subject" required>
-            <label> '; $text.= $caseNumber; $text.= '</label>
             <select name="casePriority" required>
                 <option value="">Choose one...</option>
                 <option value="1">High</option>
@@ -42,7 +40,7 @@ class NewCase extends view
         </div>
         <div class="table_col">
             <label>Category</label>
-            <label>Parent case</label>
+          
             <label>Due date</label>
         </div>
         <div class="table_col">
@@ -60,20 +58,6 @@ class NewCase extends view
                 $text.= '
             </select>
 
-            <select name="parent_case" required>
-                <option value="">Choose one...</option>
-                <option value="1">NON</option>
-                ';
-
-                foreach( $this->model->getParentDropDown() as $parent_case)
-                {
-                $parent_case = $parent_case->case_number;
-                $text.= '<option value="'.$counter.'">'.$parent_case.'</option>';
-                $counter += 1;
-                }
-
-                $text.= '
-            </select>
             <input type="date" name="dueDate" required>
             <label type="hidden" name="creationDate">
         </div>
@@ -131,9 +115,8 @@ echo $text;
 
 
 
-// echo '<script type="text/javascript">
-// alert("Case Added Successfully!\nYour Case Number is: '.$caseNumber.'");
-// </script>';
+
+
 
 
 // }
